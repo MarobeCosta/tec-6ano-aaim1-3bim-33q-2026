@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<!-- ============================================================
+  ARTEFATO   NAV07REV-6ANO-V1124-33Q
+  TIPO       ESTUDANTE
+  NO         26.08.24=NAV.07-REV_AAIM_6-9ano_002_prov
+  CHAT       frag. 359c8b75
+  CLD        057
+  GERADO EM  02/09/2026
+  MOTOR      motor-nav07rev V.11.24
+  AUDITORIA  auditoria jsdom · todas as telas · aprovado
+  PARIDADE   banco 4+4 · 240 degraus
+  PUBLICADO  a preencher
+============================================================ -->
+
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
@@ -153,6 +166,13 @@ p{font-size:17px;line-height:1.55;margin-bottom:10px}
 .trio button.t4{border-color:#2C4E76;color:#2C4E76;background:#fff}
 .btnpainel.visto{background:#E3F5DE;border-color:#3E8C2E;color:#1B6B08}
 .btnpainel.visto::after{content:" ✓"}
+.origempg{background:#F7F5FB;border:2px solid #D8D2E6;border-radius:12px;padding:13px 15px;margin-bottom:14px}
+.op-t{font-size:17px;font-weight:900;color:var(--roxo);margin-bottom:9px}
+.op-linha{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap}
+.op-passo{flex:1;min-width:150px;background:#fff;border:2px solid var(--borda);border-radius:10px;
+  padding:9px 12px;font-size:16px;line-height:1.45}
+.op-passo.op-aqui{border-color:var(--roxo);border-width:3px;background:#F2ECF9}
+.op-seta{align-self:center;font-size:22px;color:var(--roxo);font-weight:900}
 .painel{display:none;border:2px solid var(--borda);border-radius:14px;padding:16px 18px;
   background:var(--creme);margin-top:8px}
 .painel.abre{display:block}
@@ -173,11 +193,20 @@ p{font-size:17px;line-height:1.55;margin-bottom:10px}
 .rdeg b{min-width:42px}
 .rdeg .par{margin-left:auto;font-size:16px;font-weight:700}
 .bl{display:flex;align-items:center;gap:10px;color:#fff;border-radius:8px;padding:7px 13px;margin-bottom:4px;font-size:16px;font-weight:800}
+@keyframes pulsaPir{0%,100%{box-shadow:0 0 0 0 rgba(45,45,45,.45)}50%{box-shadow:0 0 0 8px rgba(45,45,45,0)}}
+.pir.pulsa,.mas.pulsa{animation:pulsaPir 1.8s ease-in-out infinite}
+.mas.duas{display:flex;flex-direction:column;gap:2px;padding:9px 13px;text-align:left}
+.mas.duas b{font-size:16px}
+.mas.duas span{font-size:15px;font-weight:600;opacity:.95}
 .mas{margin:0 auto 4px;color:#fff;border-radius:8px;padding:7px 10px;text-align:center;font-size:16px;font-weight:800}
 .gridq{display:grid;grid-template-columns:1fr 330px;gap:18px;align-items:start}
 .col-pri{display:flex;flex-direction:column}
 .col-lat{display:flex;flex-direction:column;gap:12px;position:sticky;top:70px}
-.cardlat{background:#fff;border-radius:18px;padding:20px 22px;box-shadow:0 8px 30px rgba(107,75,156,.18);
+.col-lat{min-width:0;overflow:hidden}
+.cardlat{max-width:100%;overflow-wrap:anywhere;word-break:break-word}
+.cardlat pre,.cardlat code{white-space:pre-wrap;overflow-x:auto;max-width:100%}
+.cardlat .tchip{white-space:normal}
+background:#fff;border-radius:18px;padding:20px 22px;box-shadow:0 8px 30px rgba(107,75,156,.18);
   border-top:4px solid}
 .cardlat.cl-dica{border-top-color:#E07B2C}
 .cardlat.cl-glos{border-top-color:#C79A18}
@@ -260,6 +289,7 @@ p{font-size:17px;line-height:1.55;margin-bottom:10px}
 .ret-ops .btn.op2{background:#2E6029}
 .ret-ops .btn.op3{background:#C79A18;color:#3B2200}
 .ret-ops .btn.op4{background:#B3001B}
+.ret-ops .btn.op5{background:#1F6F5C}
 .ret-ops .btn{border:none;color:#fff;font-weight:900}
 .ret-p{font-size:17px;line-height:1.6;margin:8px 0 14px}
 .ret-ops{display:flex;flex-direction:column;gap:9px}
@@ -300,6 +330,10 @@ p{font-size:17px;line-height:1.55;margin-bottom:10px}
 .alt[disabled] .altletra,.alt.travada .altletra{background:#C79A18}
 .btnaj.prox{font-weight:900;opacity:.45}
 .btnaj.prox.aceso{opacity:1}
+.jVerd{color:#1B6B08;font-style:italic;font-weight:900}
+.jFalso{color:#B3001B;font-style:italic;font-weight:900}
+.chavesdisc{background:#FFF3CD;border-left:6px solid #C79A18;border-radius:0 11px 11px 0;
+  padding:10px 14px;margin:8px 0 12px;font-size:17px;color:#7A5C00}
 .alt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:#fff;
   border:2.5px solid var(--borda);border-radius:14px;padding:13px 16px;margin-bottom:9px;
   font-size:17px;line-height:1.45;cursor:pointer;font-family:inherit;transition:all .15s}
@@ -400,6 +434,8 @@ p{font-size:17px;line-height:1.55;margin-bottom:10px}
 @keyframes anAponta{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
 .fatia.vazia{color:#8FB4D8;font-style:italic}
 .fatia-rel{font-size:15px;font-weight:800;color:#8FB4D8}
+.perso-svg{width:1.9em;height:2.1em;vertical-align:-.45em}
+.pav .perso-svg{width:2.2em;height:2.4em}
 .bitav{font-size:1.5em;line-height:1;vertical-align:-0.15em;margin-right:8px}
 .bitnome{font-size:19px;font-weight:900;letter-spacing:2px;color:var(--bit)}
 .bitbalao{position:relative;background:#1B3352;border:2px solid #2C4E76;border-radius:14px;
@@ -430,6 +466,13 @@ p{font-size:17px;line-height:1.55;margin-bottom:10px}
 .tchip.jalido{background:#E3F5DE;border-bottom-color:#3E8C2E;color:#1B6B08}
 .tchip.jalido::after{content:" ✓";font-size:.85em}
 .aba.aj.lida{background:#E3F5DE;border-color:#3E8C2E;color:#1B6B08;opacity:.85}
+.tchip.t-cmd{border-bottom-color:#FFAB19;background:#FFF6E5}
+.tchip.t-conc{border-bottom-color:#2E5C8A;background:#EAF1F8}
+.tchip.t-enun{border-bottom-color:#2E6029;background:#EAF6EC}
+.legtipo{display:flex;gap:5px;flex-wrap:wrap;margin:6px 0 8px}
+.lt{font-size:14px;font-weight:800;border-radius:8px;padding:2px 8px;border-bottom:3px solid}
+.tipoterm{display:inline-block;border:2px solid;border-radius:20px;padding:3px 13px;
+  font-size:15px;font-weight:900;margin-bottom:10px}
 .tchip.obrig{background:#FFF3CD;border-bottom-color:#C79A18;color:#7A5C00;
   border-radius:7px;animation:pulsaObrig 1.6s ease-in-out infinite;font-weight:900}
 /* alternativa travada continua legível: muda a moldura, não o texto */
@@ -527,6 +570,8 @@ p{font-size:17px;line-height:1.55;margin-bottom:10px}
   padding:11px 14px;font-size:17px;margin:10px 0}
 .objlist{font-size:17px;line-height:1.6;padding-left:22px}
 .objlist li{margin-bottom:5px}
+.tabpers td{font-size:16px;vertical-align:top}
+.tabpers td:first-child{white-space:nowrap}
 .tabela{width:100%;border-collapse:collapse;margin-top:12px;font-size:16px}
 .tabela th,.tabela td{border:1px solid var(--borda);padding:9px 11px;text-align:left}
 .tabela th{background:var(--creme);font-weight:900}
@@ -2216,7 +2261,9 @@ p{font-size:17px;line-height:1.55;margin-bottom:10px}
 /* ==================== MODO ==================== */
 const MODO_TESTE = false;
 const UNIDADE = "Laços de repetição: explorando narrativas indígenas em busca da palavra secreta";
-const VERSAO = "V.10.99";
+const NO_PROV = "26.08.24=NAV.07-REV_AAIM_6-9ano_002_prov";
+const LINK_PROV = "https://claude.ai/chat/359c8b75-e4f4-42b6-a186-d0a41a8a9507";
+const VERSAO = "V.11.24";
 /* ---- selo de conferência · dificulta adulterar o placar ---- */
 function hashTexto(s){
   let h=5381;
@@ -2317,7 +2364,7 @@ const BANCO = [
  codigo:"<div class=\"scwrap\">\n  <div class=\"sc-l ctrl\">1 &middot; Abrir a cesta.</div>\n  <div class=\"sc-l ctrl\">2 &middot; Colocar os sanduíches.</div>\n  <div class=\"sc-l ctrl\">3 &middot; Colocar o suco.</div>\n  <div class=\"sc-l ctrl\">4 &middot; Verificar se a toalha está limpa.</div>\n  <div class=\"sc-l ctrl dentro\" style=\"background:#FFF3E0;color:#17242B;font-weight:600\">5 &middot; Se estiver limpa, colocar na cesta.</div>\n  <div class=\"sc-l ctrl\">6 &middot; Fechar a cesta.</div>\n  <div class=\"sclegenda\">Em texto: este algoritmo está escrito em linguagem natural, não em blocos. Os passos 4 e 5 formam a única condição. O passo 6 vem depois dela e não depende dela.</div>\n</div>",
  colega:"Iara comentou:",
  fala:"Se a toalha estiver suja, para mim a cesta não pode ser fechada: o algoritmo trava no passo da toalha.",
- analogia:["Pense numa porta com fechadura.","Você chega com uma chave na mão.","A porta confere se é a chave certa.","Se for, abre.","Se não for, continua fechada."],
+ analogia:["Pense numa porta com fechadura.","Você chega com uma chave na mão.","A porta confere se é o chave certa.","Se for, abre.","Se não for, continua fechada."],
  glossario:[
   {t:"linguagem natural", d:"É o algoritmo escrito com palavras do dia a dia. Não é código de programação."},
   {t:"pseudocódigo", d:"É um meio-termo entre a fala e o código, com passos numerados. Não roda no computador."},
@@ -2329,7 +2376,7 @@ const BANCO = [
      no:["Nenhum, o algoritmo para na toalha","Só os três primeiros","O algoritmo volta ao começo","A cesta se fecha sozinha por vergonha"],
      ajuda:[["Olhe qual passo está recuado.","Só um depende da condição.","Os outros não."],["Você precisa achar o que está dentro da condição.","É só colocar a toalha.","Fechar a cesta está fora."],["É como uma lista de compras.","Faltou um item.","Você ainda passa no caixa."]]},
  d5:{p:"Ao analisar esse algoritmo, uma estudante afirmou: “Se a toalha estiver suja, a cesta não poderá ser fechada.” Essa afirmação é verdadeira ou falsa?",
-     alts:["O que o colega disse está certo.","O que o colega disse não está certo."],
+     alts:[],
      cert:1,
      dica:"Veja quais passos estão dentro da condição e qual passo vem depois dela, no mesmo nível dos outros."}
 },
@@ -2343,7 +2390,7 @@ const BANCO = [
  analogia:["Pense numa foto que você tirou.","Se um colega usa, ele escreve o seu nome embaixo.","Isso é dar o crédito.","Não custa nada e evita briga.","Usar sem dizer de quem é não se faz."],
  glossario:[
   {t:"autoria", d:"É o direito de quem criou uma obra de ser reconhecido por ela. Não depende de a obra ser paga."},
-  {t:"licença livre", d:"É a permissão dada pelo autor para outras pessoas usarem a obra. Não é o mesmo que estar na internet."},
+  {t:"licença livre", d:"É o permissão dada pelo autor para outras pessoas usarem a obra. Não é o mesmo que estar na internet."},
   {t:"créditos", d:"É a lista de quem participou de um trabalho. Não é enfeite."},
   {t:"uso responsável", d:"É usar conteúdo digital respeitando quem o criou. Não é apenas usar sem quebrar nada."},
   {t:"publicar", d:"É tornar um conteúdo visível para outras pessoas. A partir daí ele deixa de ser só seu."}],
@@ -2352,7 +2399,7 @@ const BANCO = [
      no:["Quem cria o jogo é dono de tudo que está nele","Conteúdo da internet é livre por natureza","Pedir autorização é exagero entre colegas","Se o jogo é gratuito, nada precisa de permissão"],
      ajuda:[["A pergunta é sobre a fala da Pri.","Liste o que no jogo não foi feito pela Noeli.","O nome do colega e as imagens."],["Você precisa separar o que é dela do que é de terceiros.","O código é dela.","O resto tem outro autor."],["É como uma festa na sua casa.","A casa é sua.","Mas a foto dos convidados não."]]},
  d5:{p:"Ao observar o comportamento de Noeli, um colega afirmou: “A ação de Noeli demonstra respeito à autoria e uso responsável de conteúdos digitais.” Essa afirmação é verdadeira ou falsa?",
-     alts:["O que o colega disse está certo.","O que o colega disse não está certo."],
+     alts:[],
      cert:0,
      dica:"Noeli fez duas coisas antes de publicar. Confira cada uma delas separadamente."}
 },
@@ -2366,13 +2413,13 @@ const BANCO = [
  analogia:["Pense num boneco com três roupas.","Ele veste uma de cada vez.","Trocar de roupa não vira outro boneco.","É o mesmo, com outra aparência.","No jogo, a roupa se chama fantasia."],
  glossario:[
   {t:"estrutura condicional", d:"É o bloco que escolhe um caminho, olhando se uma condição é verdadeira. Não é um bloco que repete."},
-  {t:"senão", d:"É a parte do bloco laranja que guarda o que acontece quando a condição é falsa. Não é um bloco que faz o programa voltar ao começo."},
+  {t:"senão", d:"É o parte do bloco laranja que guarda o que acontece quando a condição é falsa. Não é um bloco que faz o programa voltar ao começo."},
   {t:"temChave", d:"É uma variável, uma caixinha que guarda um valor do jogo. Não é um comando que o jogador digita."},
   {t:"mude para o cenário", d:"É o bloco roxo que troca o fundo da tela do jogo. Não é o bloco que decide se a troca vai acontecer."},
   {t:"variável", d:"É um nome que guarda uma informação que pode mudar durante o jogo. Não é um texto fixo escrito na tela."}],
  d2:{p:"Como se chama o bloco que só age quando a condição é verdadeira?",
-     ok:["É o se.","O bloco se.","O bloco se, da decisão."],
-     no:["Repita, da repetição.","Pergunte, da entrada.","Diga, da fala."]},
+     ok:["É o se.","O bloco se.","O bloco se, da decisão.","O nome certo é é o se."],
+     no:["Repita, da repetição.","Pergunte, da entrada.","Diga, da fala.","O nome disso é condição."]},
  d5:{p:"Com base nesse código, de que forma a estrutura condicional determina o que acontece no jogo?",
      alts:["Exibe uma mensagem ao jogador e altera a variável se a condição for verdadeira.","Encaminha o jogador para a sala secreta e exibe a mensagem se a condição for verdadeira.","Verifica se o jogador tem a chave e permite o acesso à sala secreta se a condição for verdadeira.","Repete a verificação várias vezes e permite que o jogador encontre a chave se a condição for verdadeira."],
      cert:2,
@@ -2397,7 +2444,7 @@ const BANCO = [
      no:["A pergunta aparece de novo","O programa fica repetindo até acertar","A mensagem Entrada autorizada aparece mesmo assim","O sistema chama a estudante para digitar por ele"],
      ajuda:[["Procure no desenho a palavra repita.","Ela não está lá.","Então o que sobra depois do se?"],["Você precisa saber o que o se faz sozinho.","Ele testa uma vez.","E segue adiante."],["É como bater na porta uma vez.","Ninguém abriu.","E você foi embora."]]},
  d5:{p:"Ao analisar o algoritmo, a estudante afirmou: “O trecho resposta = 1234 é responsável por repetir a pergunta várias vezes até que o código correto seja digitado.” Essa afirmação é verdadeira ou falsa?",
-     alts:["O que o colega disse está certo.","O que o colega disse não está certo."],
+     alts:[],
      cert:1,
      dica:"Procure no desenho um bloco com a palavra repita. Só depois decida."}
 },
@@ -2408,18 +2455,18 @@ const BANCO = [
  codigo:"<div class=\"figoficial\"><img onclick=\"ampliarFig(this)\" alt=\"trecho de programação da questão\" src=\"data:image/png;base64,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\"></div>",
  colega:"Kaio comentou:",
  fala:"Para mim é falsa: a mensagem aparece de qualquer jeito, porque o bloco diga está escrito ali no código.",
- analogia:["Pense numa brincadeira de adivinhar.","Você pergunta, o colega responde.","Se errou, você pergunta de novo.","E de novo, até acertar.","A pergunta é a mesma; o que muda é a resposta."],
+ analogia:["Pense numa brincadeira de adivinhar.","Você pergunta, o colega responde.","Se errou, você pergunta de novo.","E de novo, até acertar.","A pergunta é o mesma; o que muda é o resposta."],
  glossario:[
-  {t:"senha", d:"É a palavra guardada no código para comparar com o que a pessoa digita. Aqui é a palavra ouro."},
+  {t:"senha", d:"É o palavra guardada no código para comparar com o que a pessoa digita. Aqui é o palavra ouro."},
   {t:"corresponder", d:"É ser igual ao que a comparação espera. Não é ser parecido."},
   {t:"recuo", d:"É o deslocamento do bloco para a direita, que mostra que ele está dentro de outro. Não é enfeite."},
-  {t:"resposta", d:"É a palavra digitada por quem joga. Não é a senha guardada."},
+  {t:"resposta", d:"É o palavra digitada por quem joga. Não é a senha guardada."},
   {t:"diga", d:"É o bloco roxo que mostra uma fala na tela. Aqui ele só acontece se a condição der certo."}],
  d2:{p:"Como se chama o bloco que guarda o que a pessoa digitou?",
-     ok:["É o resposta.","O bloco resposta.","O bloco resposta, dos sensores."],
-     no:["Fantasia do ator.","Variável de pontos.","É o mensagem enviada."]},
+     ok:["É o resposta.","O bloco resposta.","O bloco resposta, dos sensores.","O nome disso é resposta."],
+     no:["Fantasia do ator.","Variável de pontos.","É a mensagem enviada.","O nome disso é estrutura condicional."]},
  d5:{p:"Ao analisar esse trecho de código, Solange afirmou: “A mensagem ‘Baú desbloqueado!’ aparece quando a palavra digitada corresponde à senha definida no código.” Essa afirmação é verdadeira ou falsa?",
-     alts:["O que o colega disse está certo.","O que o colega disse não está certo."],
+     alts:[],
      cert:0,
      dica:"Repare no recuo: o bloco da mensagem está dentro do se, não solto embaixo dele."}
 },
@@ -2427,22 +2474,22 @@ const BANCO = [
  of:"Q9", ordem:7, dif:"Fácil", real:"D05", aula:"A03", hab:"EF06CO02", atr:"D210", atrtxt:"Linguagem apropriada em ambientes digitais", persona:"Zé",
  titulo:"A mensagem de abertura do jogo da Iolanda",
  contexto:"Iolanda está criando um jogo no StartLab para ajudar os colegas a adivinhar uma palavra secreta a partir de três dicas sobre temas culturais. Ao revisar a mensagem de abertura do jogo, ela olhou para a frase que recebe quem vai jogar.",
- codigo:"<div class=\"scwrap\"><div class=\"sc-l evt\">quando <span class=\"sc-oval o-sens\" style=\"background:#4CAF50\">&#9873;</span> for clicado</div><div class=\"sc-l look\">diga <span class=\"sc-campo\">Vamos jogar! A cada dica, tente adivinhar.</span></div><div class=\"sc-l ctrl\">espere <span class=\"sc-campo\">3</span> segundos</div><div class=\"sc-l sens\">pergunte <span class=\"sc-campo\">Qual é a palavra secreta?</span> e espere</div><div class=\"sc-l ctrl\">se <span class=\"sc-oval o-sens\" style=\"background:#3A8FB7\">resposta</span> = <span class=\"sc-campo\">palavra secreta</span> então</div><div class=\"sc-l look\">&nbsp;&nbsp;&nbsp;diga <span class=\"sc-campo\">Você acertou!</span></div></div>",
+ codigo:"<div class=\"scwrap\"><div class=\"sc-l evt\">quando <span class=\"sc-oval o-sens\" style=\"background:#4CAF50\">&#9873;</span> for clicado</div><div class=\"sc-l look\">diga <span class=\"sc-campo\">Vamos jogar! A cada dica, tente adivinhar.</span></div><div class=\"sc-l ctrl\">espere <span class=\"sc-campo\">3</span> segundos</div><div class=\"sc-l sens\">pergunte <span class=\"sc-campo\">Qual é o palavra secreta?</span> e espere</div><div class=\"sc-l ctrl\">se <span class=\"sc-oval o-sens\" style=\"background:#3A8FB7\">resposta</span> = <span class=\"sc-campo\">palavra secreta</span> então</div><div class=\"sc-l look\">&nbsp;&nbsp;&nbsp;diga <span class=\"sc-campo\">Você acertou!</span></div></div>",
  colega:"Zé comentou:",
  fala:"Para mim é falsa: mensagem de jogo devia ser bem informal, com gíria, senão ninguém se anima.",
  analogia:["Pense numa placa na entrada da festa.","Ela diz o que vai acontecer lá dentro.","Quem chega já sabe o que esperar.","Sem a placa, a pessoa entra perdida.","No jogo, essa placa é a mensagem de abertura."],
  glossario:[
-  {t:"linguagem adequada", d:"É a forma de escrever que combina com quem vai ler e com a situação. Não é a forma mais difícil."},
-  {t:"convite", d:"É a frase que chama a pessoa para participar. Aqui é o Vamos jogar."},
-  {t:"instrução", d:"É a parte que explica o que fazer. Aqui é tentar se aproximar da resposta a cada dica."},
+  {t:"linguagem adequada", d:"É o forma de escrever que combina com quem vai ler e com a situação. Não é o forma mais difícil."},
+  {t:"convite", d:"É o frase que chama a pessoa para participar. Aqui é o Vamos jogar."},
+  {t:"instrução", d:"É o parte que explica o que fazer. Aqui é tentar se aproximar da resposta a cada dica."},
   {t:"público", d:"É quem vai ler a mensagem. Aqui são colegas da mesma idade."},
-  {t:"gíria", d:"É a palavra usada só por um grupo. Nem todo leitor entende, então nem sempre é adequada."}],
+  {t:"gíria", d:"É o palavra usada só por um grupo. Nem todo leitor entende, então nem sempre é adequada."}],
  d4:{p:"O Zé disse que a mensagem devia ser bem informal, com gíria. A fala dele se sustenta?",
      ok:["Gíria pode excluir quem não conhece aquela palavra","A mensagem precisa ser clara para todos os participantes","Informal demais não é o mesmo que adequada","A frase da Iolanda já é simples e acolhedora sem gíria"],
      no:["Jogo pede sempre linguagem de gíria","Quanto mais informal, mais gente entende","Frases sem gíria afastam os colegas","Gíria deixa o jogo mais rápido"],
      ajuda:[["A pergunta é sobre a fala do Zé.","Pense num colega que não conhece a gíria.","Ele entende a instrução?"],["Você precisa separar informal de adequado.","Informal é o tom.","Adequado é servir a quem lê."],["É como falar com um grupo grande.","A palavra que só três entendem.","Deixa os outros de fora."]]},
  d5:{p:"Ao revisar a mensagem de abertura, Iolanda afirmou: “A mensagem ‘Vamos jogar! A cada dica, tente se aproximar da resposta correta!’ utiliza uma linguagem adequada para receber os participantes do jogo.” Essa afirmação é verdadeira ou falsa?",
-     alts:["O que o colega disse está certo.","O que o colega disse não está certo."],
+     alts:[],
      cert:0,
      dica:"Pergunte-se duas coisas sobre a frase: ela é clara e ela é respeitosa com quem lê?"}
 },
@@ -2455,17 +2502,17 @@ const BANCO = [
  fala:"Esse mude para a fantasia 2 faz o jogador ter que clicar duas vezes no botão para ver a pista.",
  analogia:["Pense num livro da biblioteca.","Na primeira página está o nome de quem escreveu.","Ninguém arranca essa página.","Usar a obra e dizer de quem é andam juntos.","Na internet é igual."],
  glossario:[
-  {t:"fantasia", d:"É cada aparência que o ator pode ter, identificada por nome ou número. Não é a quantidade de vezes que algo acontece."},
+  {t:"fantasia", d:"É cada aparência que o ator pode ter, identificada por nome ou número. Não é o quantidade de vezes que algo acontece."},
   {t:"evento", d:"É o que dispara o código, como um clique. Não é o resultado do código."},
   {t:"comando", d:"É a ordem que o bloco dá ao computador. Não é uma sugestão."},
   {t:"clique", d:"É a ação do jogador que dispara o bloco de evento. Um clique dispara o código uma vez."},
   {t:"ator", d:"É o objeto do jogo que recebe o clique, aqui o botão. Não é o cenário."}],
  d3:{p:"O jogador clica no botão uma vez. Qual fantasia o botão passa a mostrar?",
-     ok:["A fantasia 2","A fantasia de número 2, já no primeiro clique","A 2, porque é a que está escrita no bloco","A fantasia 2, com um clique só"],
+     ok:["A fantasia 2","A fantasia de número 2, já no primeiro clique","A 2, porque é o que está escrita no bloco","A fantasia 2, com um clique só"],
      no:["Continua na fantasia 1","A fantasia 3","Nenhuma, porque falta um clique","A fantasia fica piscando entre a 1 e a 2"],
-     ajuda:[["Olhe as duas linhas do código.","O evento é o clique.","O que vem logo abaixo acontece na hora."],["Você precisa ler o número como nome.","Fantasia 2 é o nome da aparência.","Não é a quantidade de cliques."],["É como apertar o botão do elevador.","Você aperta o 2.","Ele vai para o andar 2, não aperta duas vezes."]]},
+     ajuda:[["Olhe as duas linhas do código.","O evento é o clique.","O que vem logo abaixo acontece na hora."],["Você precisa ler o número como nome.","Fantasia 2 é o nome da aparência.","Não é o quantidade de cliques."],["É como apertar o botão do elevador.","Você aperta o 2.","Ele vai para o andar 2, não aperta duas vezes."]]},
  d5:{p:"Ao analisar esse código, um colega afirmou: “O comando mude para a fantasia 2 faz com que o jogador precise clicar duas vezes no botão para visualizar a pista.” Essa afirmação é verdadeira ou falsa?",
-     alts:["O que o colega disse está certo.","O que o colega disse não está certo."],
+     alts:[],
      cert:1,
      dica:"O número 2 dentro do bloco é o nome da fantasia, não uma contagem de cliques. Repare quantas linhas o código tem."}
 },
@@ -2481,11 +2528,11 @@ const BANCO = [
   {t:"sequência", d:"É a ordem em que os blocos acontecem, de cima para baixo. Não é uma coisa que acontece tudo junto."},
   {t:"espere", d:"É o bloco laranja que segura o programa parado por um tempo. Não é um bloco que repete."},
   {t:"mude para a fantasia", d:"É o bloco roxo que troca a aparência do ator por uma fantasia escolhida. Não é o bloco próxima fantasia, que anda sozinho na lista."},
-  {t:"ator", d:"É o personagem ou objeto que aparece na tela do jogo. Não é o cenário de fundo."},
+  {t:"ator", d:"É a personagem ou objeto que aparece na tela do jogo. Não é o cenário de fundo."},
   {t:"aleatoriamente", d:"É quando o computador sorteia um valor sem ordem fixa. Não é o que acontece quando os blocos estão em sequência."}],
  d2:{p:"Como se chama o bloco que troca a aparência do ator?",
-     ok:["Mude para a fantasia.","O bloco de trocar fantasia.","O bloco que muda a fantasia."],
-     no:["Espere, que faz a pausa.","Pergunte, que espera resposta.","Repita, que repete a ação."]},
+     ok:["Mude para a fantasia.","O bloco de trocar fantasia.","O bloco que muda a fantasia.","O nome disso é fantasia."],
+     no:["Espere, que faz a pausa.","Pergunte, que espera resposta.","Repita, que repete a ação.","O nome disso é fantasia."]},
  d5:{p:"Nesse caso, ao clicar na bandeira verde, o que será observado na aparência do ator Rádio?",
      alts:["Ele mostrará todas as fantasias ao mesmo tempo.","Ele exibirá as fantasias em sequência a cada segundo.","Ele ficará repetindo a troca entre as fantasias sem parar.","Ele escolherá uma fantasia aleatoriamente a cada execução."],
      cert:1,
@@ -2502,12 +2549,12 @@ const BANCO = [
  glossario:[
   {t:"laço de repetição", d:"É um bloco que manda o computador fazer a mesma coisa mais de uma vez. Não é um bloco que fala com o jogador."},
   {t:"repita até que", d:"É o bloco laranja que fica repetindo enquanto a condição não fica verdadeira. Não é um bloco que repete um número fixo de vezes."},
-  {t:"resposta", d:"É a palavra que o jogador digitou por último. Não é a resposta certa da brincadeira."},
+  {t:"resposta", d:"É o palavra que o jogador digitou por último. Não é o resposta certa da brincadeira."},
   {t:"pergunte e espere", d:"É o bloco azul que mostra a pergunta e para o jogo até o jogador digitar. Não é ele que decide quantas vezes a pergunta aparece."},
   {t:"condição", d:"É a comparação que pode dar certo ou errado, como resposta igual a morangos. Não é um comando, é um teste."}],
  d1:{p:"Segundo o enunciado, onde os amigos inventaram a brincadeira?",
-     ok:["É o no parque.","No parque, com o lanche.","Num parque, durante o lanche."],
-     no:["Na sala de aula.","Na quadra da escola.","Na casa de um deles."]},
+     ok:["É o no parque.","No parque, com o lanche.","Num parque, durante o lanche.","No enunciado, é parque."],
+     no:["Na sala de aula.","Na quadra da escola.","Na casa de um deles.","No enunciado, é variável."]},
  d5:{p:"Com base nessa estrutura de código, qual bloco representa o laço de repetição que mantém o jogo em execução até que a resposta correta seja digitada?",
      alts:["quando [bandeira verde] for clicado","repita até que <(resposta) = [morangos]>","pergunte [Complete: No piquenique...] e espere","diga [Muito bem! Você acertou!]"],
      cert:1,
@@ -2522,7 +2569,7 @@ const BANCO = [
  fala:"Acho falsa: para mim esse laço roda 30 vezes e para, sem olhar o valor do tempo.",
  analogia:["Pense na entrada de um show.","O segurança olha o ingresso.","Ingresso certo, passa.","Ingresso errado, não passa.","Ele compara antes de decidir."],
  glossario:[
-  {t:"variável", d:"É a caixinha com nome que guarda um valor que muda. Aqui ela se chama tempo."},
+  {t:"variável", d:"É o caixinha com nome que guarda um valor que muda. Aqui ela se chama tempo."},
   {t:"adicione", d:"É o bloco que soma um valor ao que já está guardado. Somar menos um é o mesmo que tirar um."},
   {t:"repita até que", d:"É o bloco que repete enquanto a condição for falsa e para quando ela vira verdadeira."},
   {t:"condição de parada", d:"É o teste que encerra o laço. Aqui é tempo igual a zero."},
@@ -2532,7 +2579,7 @@ const BANCO = [
      no:["É o 1 volta.","É o nenhuma volta.","É o infinitas voltas.","29 voltas e meia"],
      ajuda:[["O tempo começa em 30.","Cada volta tira 1.","Quantas voltas até chegar a zero?"],["Você precisa ver o que adicione -1 faz.","Ele diminui o valor.","Um por volta."],["É como descer uma escada de 30 degraus.","Um degrau por vez.","São 30 passos."]]},
  d5:{p:"Ao analisar o algoritmo, a estudante afirmou: “A estrutura de repetição continuará executando os comandos enquanto o valor da variável tempo for diferente de zero.” Essa afirmação é verdadeira ou falsa?",
-     alts:["O que o colega disse está certo.","O que o colega disse não está certo."],
+     alts:[],
      cert:0,
      dica:"Leia o nome do bloco laranja de fora: repita ATÉ QUE tempo seja igual a zero. Pense no que acontece antes disso."}
 },
@@ -2548,7 +2595,7 @@ const BANCO = [
   {t:"laço de repetição", d:"É o bloco que faz o computador repetir um trecho do código. Não é um bloco que espera."},
   {t:"sempre", d:"É o bloco que repete sem fim e nunca para sozinho. Não serve quando você sabe o número exato de voltas."},
   {t:"espere", d:"É o bloco que segura o programa parado por um tempo. Não muda quantas vezes uma ação acontece."},
-  {t:"fantasia", d:"É a aparência do ator, aqui cada lado do dado. Não é um comando de sorteio."},
+  {t:"fantasia", d:"É o aparência do ator, aqui cada lado do dado. Não é um comando de sorteio."},
   {t:"lançamento", d:"É cada vez que o dado mostra um lado novo. Não é o tempo que o dado fica parado na tela."}],
  d4:{p:"O Ivo disse que basta aumentar o tempo de espera. A fala dele se sustenta?",
      ok:["O tempo de espera não cria lançamentos novos","Esperar mais só deixa o jogo mais lento, com um lançamento só","Quantidade de voltas e tempo de espera são coisas diferentes","Sem um bloco de repetição, o dado continua sendo lançado uma vez"],
@@ -2594,7 +2641,7 @@ const BANCO = [
   {t:"repita até que", d:"É o bloco que fica repetindo enquanto a condição for falsa. Não é um bloco que escolhe entre dois caminhos."},
   {t:"se... então", d:"É o bloco que testa uma vez e decide o que fazer. Não é um bloco que repete."},
   {t:"condição", d:"É a comparação que pode ser verdadeira ou falsa. Não é um comando que aparece na tela."},
-  {t:"resposta", d:"É o que o jogador digitou por último. Não é a resposta certa guardada pelo jogo."},
+  {t:"resposta", d:"É o que o jogador digitou por último. Não é o resposta certa guardada pelo jogo."},
   {t:"verificação", d:"É o momento em que o programa confere se a condição é verdadeira. Não é o momento em que ele pergunta."}],
  d4:{p:"A Lu disse que o se... então também ficaria repetindo a pergunta. A fala dela se sustenta?",
      ok:["O se... então testa uma vez e segue adiante","Ele escolhe um caminho, mas não volta para trás","Sem o bloco de repetição por fora, a pergunta apareceria uma vez","Repetir e escolher são funções diferentes, e ele só escolhe"],
@@ -2615,16 +2662,16 @@ const BANCO = [
  analogia:["Pense em recolher tampinhas no quintal.","Enquanto houver tampinha, você continua.","Quando não houver mais, você para.","Ninguém conta antes quantas são.","A condição é o que manda parar."],
  glossario:[
   {t:"estrutura de controle", d:"É o bloco que decide o caminho ou a repetição do programa. Não é um valor guardado."},
-  {t:"estrutura de repetição", d:"É a que faz uma ação acontecer várias vezes até uma condição. É o caso das moedas."},
-  {t:"estrutura condicional", d:"É a que escolhe entre caminhos, uma vez só. Não faz a ação se repetir."},
+  {t:"estrutura de repetição", d:"É o que faz uma ação acontecer várias vezes até uma condição. É o caso das moedas."},
+  {t:"estrutura condicional", d:"É o que escolhe entre caminhos, uma vez só. Não faz a ação se repetir."},
   {t:"condição de parada", d:"É o que encerra a repetição. Aqui é não haver mais moedas."},
-  {t:"discursiva", d:"É a questão em que se escreve a resposta com as próprias palavras. Não tem alternativa para marcar."}],
- d1:{partes:{ok:["A estrutura indicada é a de repetição","O caminho é usar uma estrutura de repetição","É preciso usar repetição","A resposta é a estrutura de repetição","O programa deve usar repetição"],no:["A estrutura indicada é a condição","O caminho é usar uma variável simples","É preciso usar um evento","A resposta é montar uma lista de moedas","O programa deve usar a fantasia"]},p:"Segundo o enunciado, o que o personagem precisa coletar pelo cenário?",
+  {t:"discursiva", d:"É o questão em que se escreve a resposta com as próprias palavras. Não tem alternativa para marcar."}],
+ d1:{partes:{ok:["A estrutura indicada é o de repetição","O caminho é usar uma estrutura de repetição","É preciso usar repetição","A resposta é a estrutura de repetição","O programa deve usar repetição"],no:["A estrutura indicada é a condição","O caminho é usar uma variável simples","É preciso usar um evento","A resposta é montar uma lista de moedas","O programa deve usar a fantasia"]},p:"Segundo o enunciado, o que o personagem precisa coletar pelo cenário?",
      ok:["As moedas espalhadas pelo cenário","Moedas, até não restar nenhuma","As moedas, que estão espalhadas","Moedas espalhadas pela fase"],
      no:["As fases seguintes do jogo","Os cliques do jogador na tela","Os pontos guardados na variável","As moedas que o jogo esconde no céu"]},
  d2:{partes:{ok:["como o bloco repita até que","com o bloco repita até que","usando o repita até que","no formato do repita até que","com o repita até que do StartLab"],no:["como o bloco se então","com o bloco quando a bandeira for clicada","usando o bloco diga","no formato do bloco espere","com o bloco mude para a fantasia"]},p:"Como se chama a estrutura que faz a mesma ação acontecer várias vezes até uma condição?",
      ok:["Estrutura de repetição","Repetição, como o repita até que","O laço de repetição do programa","Estrutura de repetição com condição de parada"],
-     no:["É o estrutura condicional.","É o variável.","É o evento.","Estrutura de teimosia, que insiste sozinha"]},
+     no:["É a estrutura condicional.","É a variável.","É o evento.","Estrutura de teimosia, que insiste sozinha"]},
  d3:{partes:{ok:["porque procurar moedas acontece várias vezes","porque a busca se repete muitas vezes","porque o personagem procura de novo e de novo","porque a mesma ação se repete no cenário","porque a procura não termina numa vez só"],no:["porque a moeda aparece uma vez só","porque o cenário nunca muda","porque o jogo já sabe quantas moedas existem","porque a decisão é tomada uma única vez","porque o personagem anda sozinho"]},p:"O personagem recolhe uma moeda e ainda restam outras no cenário. O que o programa precisa fazer em seguida?",
      ok:["Procurar de novo, porque ainda há moedas","Voltar ao começo da procura e repetir","Repetir a ação de procurar, já que a condição de parada não chegou","Continuar no mesmo laço, sem passar de fase"],
      no:["Passar para a próxima fase","Encerrar o jogo","Perguntar ao jogador se ele quer continuar","Contar as moedas e devolver uma para o cenário"],
@@ -2663,6 +2710,20 @@ const BALA_AVALIACAO = [
   {min:9.00, max:10.00, n:2, texto:"de 9,00 a 10,00 = 2 balas"},
   {min:7.00, max:8.99, n:1, texto:"de 7,00 a 8,99 = 1 bala"}
 ];
+function tipoDoTermo(t,q){
+  const s=String(t).toLowerCase();
+  // 1 · comando ou bloco de programação
+  if(/^(input|print|int|float|str|if|else|elif|while|for|in|range|append|len|random|lower|==|!=|>=|<=)/.test(s)
+     || /^(repita|sempre|se |senão|mude|adicione|apague|pergunte|diga|espere|quando|item|tamanho)/.test(s)
+     || (q.codigo||"").toLowerCase().indexOf(s)>=0)
+    return {k:"cmd",cor:"#FFAB19",rot:"comando"};
+  // 2 · conceito da computação
+  if(/lista|variável|variavel|laço|laco|condi|estrutura|repetição|repeticao|algoritmo|índice|indice|matriz|bool/.test(s))
+    return {k:"conc",cor:"#2E5C8A",rot:"conceito"};
+  // 3 · palavra do enunciado
+  return {k:"enun",cor:"#2E6029",rot:"palavra do texto"};
+}
+
 function cardPremiacao(nota1){
   const ganhou = (nota1!==null && nota1>=BALA_REVISAO.min);
   let h='<div style="background:var(--destaque);border-left:6px solid #E4C86A;'+
@@ -2843,6 +2904,7 @@ function retomar(){
   const p=lerProgresso(); if(!p) return;
   estudante=p.estudante; turma=p.turma; chamadaNum=p.chamada||"";
   genero=generoDoNome(estudante); registro=p.registro||{};
+  tempoAcum=0; tempoDesde=Date.now();
   RODADA=p.rodada||1; saidasTC=p.saidas||0;
   horaInicio=new Date(p.inicio||Date.now());
   iTela=p.iTela||0; tentAtual=1;
@@ -2894,7 +2956,9 @@ function montarRoteiro(){
         roteiro.push({t:"chk",marco:n,aula:aulaAtual});
         roteiro.push({t:"pausa",aula:aulaAtual});
       }
-      aulaAtual=q.aula;roteiro.push({t:"capa",aula:q.aula});
+      aulaAtual=q.aula;
+      roteiro.push({t:"capa",aula:q.aula});
+      roteiro.push({t:"objs",aula:q.aula});
     }
     degrausDe(q).forEach(function(d){
       n++;roteiro.push({t:"perg",qi:qi,deg:d,n:n,aula:q.aula});
@@ -2920,6 +2984,7 @@ function rotuloTela(r){
   if(r.t==="abertura") return "Escolha a turma, escreva o seu número de chamada e o seu nome. Depois clique em Começar, aqui embaixo.";
   if(r.t==="conviv") return "o combinado";
   if(r.t==="capa") return nomeAula(r.aula);
+  if(r.t==="objs") return "objetivos · "+nomeAula(r.aula);
   if(r.t==="pausa") return "pausa · "+nomeAula(r.aula);
   if(r.t==="chk") return "placar parcial";
   if(r.t==="final") return "placar final";
@@ -2978,11 +3043,12 @@ function pintarRodape(){
   if(fx) fx.remove();
   if(VOLTAR_PARA!=null && pal){
     pal.insertAdjacentHTML("afterbegin",
-      '<div class="faixavolta" id="faixaVolta">👀 Você está revendo uma tela antiga. '+
+      '<div class="faixavolta" id="faixaVolta">👀 Você está '+
+      (MODO_CONSULTA?'conferindo uma pergunta já respondida':'revendo uma tela antiga')+'. '+
       '<button class="btn" onclick="voltarOnde()">Voltar para onde eu estava · tela '+
       (VOLTAR_PARA+1)+'</button></div>');
   }
-  volta.disabled = !(MODO_TESTE || VOLTAR_PARA!=null) || iTela===0;
+  volta.disabled = !(MODO_TESTE || VOLTAR_PARA!=null || MODO_CONSULTA) || iTela===0;
   if(VOLTAR_PARA!=null) volta.onclick=voltarOnde;
   const ch=document.getElementById("chamada");
   if(ch) ch.innerHTML=chamadaHTML();
@@ -2992,6 +3058,7 @@ function pintarRodape(){
 function formaDe(r){
   if(r.t==="conviv") return {s:"▲",c:"#8E2B2B"};
   if(r.t==="capa")   return {s:"■",c:corAula(r.aula)};
+  if(r.t==="objs")   return {s:"◎",c:corAula(r.aula)};
   if(r.t==="pausa")  return {s:"▶",c:"#7B2D8E"};
   if(r.t==="chk"||r.t==="final") return {s:"★",c:"#D89E00"};
   if(r.t==="abertura") return {s:"■",c:"#7B2D8E"};
@@ -3039,7 +3106,9 @@ function abrirLista(){
     const feita=(r.t==="perg")?!!registro[r.n]:(i<iTela);
     const aqui=(i===iTela);
     // tela já vista que não é pergunta pode ser revisitada
-    const revisitar=(!aqui&&i<iTela&&r.t!=="perg"&&r.t!=="pausa");
+    // tela já vista pode ser reaberta para CONSULTA; pergunta respondida também
+    const respondida=(r.t==="perg"&&!!registro[r.n]);
+    const revisitar=(!aqui&&i<iTela&&r.t!=="pausa"&&(r.t!=="perg"||respondida));
     let cls="ll"+(feita?" feita":"")+(aqui?" aqui":"")+((MODO_TESTE||revisitar)?" clic":"");
     const fundo=r.aula?corAula(r.aula)+"14":"#FFFFFF";
     let fim=aqui?'<span class="fim">VOCÊ ESTÁ AQUI ▶</span>':
@@ -3073,6 +3142,7 @@ function abrirLista(){
       if(BANCO[r.qi].codigo) pil+='<span class="pill" style="border-color:#1E2B33;color:#1E2B33">▣ tem código</span>';
       if(r.deg!=="d3"&&BANCO[r.qi].fala) pil+='<span class="pill" style="border-color:var(--roxo);color:var(--roxo)">❝ fala do colega</span>';
       pil+='<span class="pill" style="border-color:#E4C86A;color:#8A6D00">📖 tem pastilha</span>';
+    } else if(r.t==="objs"){ pil='<span class="pill cat">🎯 objetivos da aula</span>';
     } else if(r.t==="pausa"){ pil='<span class="pill cat">🎮 jogo da pausa</span>';
     } else if(r.t==="capa"){ pil='<span class="pill cat">capa da aula</span>';
     } else if(r.t==="conviv"){ pil='<span class="pill cat">o combinado</span>';
@@ -3090,17 +3160,21 @@ function abrirLista(){
   document.getElementById("caixaL").innerHTML=h;
   document.getElementById("modalL").classList.add("abre");
 }
-let VOLTAR_PARA=null;
+let VOLTAR_PARA=null, MODO_CONSULTA=false;
 function voltarOnde(){
+  MODO_CONSULTA=false;
   if(VOLTAR_PARA==null) return;
   iTela=VOLTAR_PARA; VOLTAR_PARA=null; tentAtual=tentAtual||1; render();
 }
 function pular(i){
   const r=roteiro[i];
-  if(i<iTela && r && r.t!=="perg" && r.t!=="pausa") VOLTAR_PARA=iTela;
-  // no modo estudante, só volta a telas já vistas que não sejam pergunta nem pausa
+  if(i<iTela && r && r.t!=="pausa") VOLTAR_PARA=iTela;
+  MODO_CONSULTA=false;
+  if(i<iTela && r && r.t==="perg" && registro[r.n]) MODO_CONSULTA=true;
   if(!MODO_TESTE){
-    if(!(i<iTela && r && r.t!=="perg" && r.t!=="pausa")) return;
+    const podeVer = i<iTela && r && r.t!=="pausa" &&
+      (r.t!=="perg" || !!registro[r.n]);
+    if(!podeVer) return;
   }
   fecharModal("modalL");
   if(!horaInicio){estudante=estudante||"PROFESSOR";turma=turma||"6ºTESTE";horaInicio=new Date()}
@@ -3133,6 +3207,14 @@ const ATALHOS_BASE=[
  {rotulo:"F11",faz:"entra e sai da tela cheia",teclas:["F11"]}
 ];
 let RESULTADO_JOGO={};
+function peleDaAula(aula){
+  const E=ELENCO_AULA[aula]||ELENCO_AULA.A01;
+  const cor=corAula(aula);
+  return { rotulo:nomeAula(aula),
+           forma:(aula==="A01"?"bolha":"balao"),
+           cores:{ baloes:[cor+"33",cor+"22"], tijolos:[cor+"33"] },
+           borda:"#2D2D2D" };
+}
 function abrirJogoDaPausa(aula){
   const cfg=JOGO_POR_AULA[aula]||{j:1,modo:"classico"};
   const cx=document.getElementById("jogoBox");
@@ -3149,12 +3231,19 @@ function abrirJogoDaPausa(aula){
       alvo.appendChild(document.getElementById("jd-raiz"));
       document.getElementById("jd-raiz").style.display="";
       iniciarJogoDigitacao(palavrasDaAula(aula),60,function(res){ guardarJogo(aula,res) },
-        {modo:cfg.modo, escolherModo:true});
+        {modo:cfg.modo, escolherModo:true, pele:peleDaAula(aula), escolherPele:false});
     }
   }catch(e){ cx.innerHTML='<div class="jogo-vazio"><div class="jv-t">O jogo não abriu</div></div>' }
 }
 function guardarJogo(aula,res){
   RESULTADO_JOGO[aula]=res;
+  const E=(ELENCO_AULA[aula]||ELENCO_AULA.A01);
+  const bom=(res.nota!=null && res.nota>=7);
+  const cx0=document.getElementById("jogoBox");
+  if(cx0) cx0.insertAdjacentHTML("beforeend",
+    balaoPersona(bom?faunaDaTela(1):E.erro,
+      bom ? "Boa! Dedo rápido e cabeça no lugar."
+          : "Deu para treinar. Da próxima a gente melhora."));
   const cx=document.getElementById("jogoBox");
   if(cx) cx.insertAdjacentHTML("beforeend",
     '<div class="jogo-res">🎮 '+(res.nota!=null?("nota de treino "+n2(res.nota)):"")+
@@ -3164,11 +3253,13 @@ function guardarJogo(aula,res){
 }
 /* ==================== CRONOMETRO ==================== */
 setInterval(function(){
+  if(!tempoDesde && !document.hidden) seguirRelogio();
   const el=document.getElementById("cronoTxt");
   if(!el) return;
   if(!horaInicio){ el.textContent="00:00"; return }
-  const s=Math.floor((Date.now()-horaInicio.getTime())/1000);
-  el.textContent=String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");
+  const s=Math.floor(tempoGasto()/1000);
+  const h=Math.floor(s/3600), m=Math.floor((s%3600)/60), g=s%60;
+  el.textContent=(h>0?(h+":"):"")+String(m).padStart(2,"0")+":"+String(g).padStart(2,"0");
 },1000);
 
 /* ==================== TRILHA ==================== */
@@ -3235,7 +3326,16 @@ window.addEventListener("focus",seguirRelogio);
 function atualizarStatus(){
   const v=document.getElementById("stVer"); if(v) v.textContent=VERSAO;
   const bz=document.getElementById("btZerar"); if(bz&&MODO_TESTE) bz.style.display="";
-  const rd=document.getElementById("stRodada"); if(rd) rd.textContent="Rodada "+RODADA;
+  const ct2=document.getElementById("stTent");
+  if(ct2){
+    const r2=roteiro[iTela];
+    if(r2&&r2.t==="perg"&&!registro[r2.n]){
+      ct2.textContent="Tentativa "+tentAtual+" de "+MAX_TENT;
+      ct2.style.display="";
+    } else ct2.style.display="none";
+  }
+  const rd=document.getElementById("stRodada");
+  if(rd) rd.textContent="Rodada "+RODADA+(RODADA>1?" · refazendo":"");
   const r=roteiro[iTela];
   const ct=document.getElementById("stTema"), cn=document.getElementById("stNav");
   if(ct&&cn){
@@ -3262,7 +3362,9 @@ function atualizarStatus(){
     "Estudante: "+(chamadaNum?("nº "+chamadaNum+" · "):"")+(estudante||"—");
   document.getElementById("stTurma").textContent="Turma: "+(turma||"—");
   document.getElementById("stTent").textContent="Tentativa "+tentAtual;
-  document.getElementById("stTela").textContent="Tela "+(iTela+1)+" de "+roteiro.length;
+  const rT=roteiro[iTela];
+  document.getElementById("stTela").textContent="Tela "+(iTela+1)+" de "+roteiro.length+
+    ((rT&&rT.t==="perg")?(" · pergunta "+rT.n+" de "+totalPerguntas):"");
   document.getElementById("stSaidas").textContent="👁️ Saídas: "+saidasTC;
   const cd=document.getElementById("stDeg");
   const CAT={abertura:"identificação",conviv:"o combinado",capa:"capa da aula",
@@ -3290,11 +3392,18 @@ function n2(x){return x.toFixed(2).replace(".",",")}
 function render(){
   const r=roteiro[iTela];
   salvarProgresso();
-  if(RENDER_ULT!==iTela){ EXIG_CACHE={}; RENDER_ULT=iTela }if(!r)return;
+  if(RENDER_ULT!==iTela){
+    EXIG_CACHE={};
+    // a memória de pares é por tema: só zera quando o tema muda
+    if(!r || r.qi!==TEMA_ULT){ PARES_USADOS={}; TEMA_ULT=(r?r.qi:null) }
+    RENDER_ULT=iTela;
+  }
+  if(!r)return;
   if(r.t==="abertura") telaAbertura();
   else if(r.t==="conviv") telaConvivencia();
   else if(r.t==="capa") telaCapa(r);
   else if(r.t==="pausa") telaPausa(r);
+  else if(r.t==="objs") telaObjetivos(r);
   else if(r.t==="perg") telaPergunta(r);
   else if(r.t==="chk") telaCheckpoint(r);
   else if(r.t==="final") telaFinal();
@@ -3326,6 +3435,32 @@ function avisoSemMemoria(){
     'Sem ela não dá para retomar de onde parou nem lembrar as palavras já lidas. '+
     'Use o endereço publicado da revisão, em vez do arquivo baixado.</p></div>';
 }
+function escolherAula(){
+  const c=document.getElementById("caixaRet");
+  let bt="";
+  AULAS.forEach(function(a){
+    const its=roteiro.filter(function(x){return x.t==="perg"&&x.aula===a.id});
+    if(!its.length) return;
+    const capa=roteiro.findIndex(function(x){return x.t==="capa"&&x.aula===a.id});
+    bt+='<button class="btn op2" onclick="irParaAula(\''+a.id+'\');fecharModal(\'modalRet\')">'+
+        a.nome+' · '+its.length+' perguntas</button>';
+  });
+  c.innerHTML='<div class="gcab"><span class="yara">📚</span>'+
+    '<span class="ynome" style="color:#2E6029">ESCOLHA A AULA</span></div>'+
+    '<h2>Por qual aula você quer começar?</h2>'+
+    '<p class="ret-p">Você pode começar por qualquer uma. As outras continuam disponíveis depois.</p>'+
+    '<div class="ret-ops">'+bt+
+    '<button class="btn op4" onclick="abrirRetomada()">◀ voltar</button></div>';
+}
+function irParaAula(id){
+  const p=lerProgresso();
+  if(p){ estudante=p.estudante; turma=p.turma; chamadaNum=p.chamada||"";
+         genero=generoDoNome(estudante); registro=p.registro||{}; RODADA=p.rodada||1 }
+  const capa=roteiro.findIndex(function(x){return x.t==="capa"&&x.aula===id});
+  iTela=(capa>=0)?capa:0;
+  tentAtual=1; AJ={trilha:null,pos:0,fim:false,lidas:[]}; EXIG_CACHE={};
+  salvarProgresso(); render();
+}
 function abrirRetomada(){
   const p=lerProgresso();
   const lidas=Object.keys(LIDOS||{}).length;
@@ -3349,6 +3484,7 @@ function abrirRetomada(){
         '<button class="btn op2" onclick="reiniciarAula();fecharModal(\'modalRet\')">2 · Recomeçar '+nomeAula+'</button>'
       : '')+
     '<button class="btn op3" onclick="reiniciarTudo();fecharModal(\'modalRet\')">3 · Recomeçar da primeira aula</button>'+
+    '<button class="btn op5" onclick="escolherAula()">5 · Começar por outra aula</button>'+
     '<button class="btn op4" onclick="comecarDoZero();fecharModal(\'modalRet\')">4 · '+
     (p&&p.estudante? 'Esse «'+p.estudante+'» não sou eu' : 'Não sou eu')+' · vou me identificar</button>'+
     '</div>';
@@ -3371,6 +3507,7 @@ function reiniciarAula(){
   if(id) roteiro.forEach(function(x){ if(x.t==="perg"&&x.aula===id) delete registro[x.n] });
   tentAtual=1; AJ={trilha:null,pos:0,fim:false,lidas:[]}; EXIG_CACHE={};
   iTela=(capa>=0)?capa:roteiro.findIndex(function(x){return x.t==="capa"});
+  AULA_REFAZENDO=idAula;
   salvarProgresso(); render();
 }
 function reiniciarTudo(){
@@ -3416,9 +3553,15 @@ function telaAbertura(){
     return '<span class="pill" style="background:'+DEGRAUS[d].hex+';color:#fff;border-color:'+
            DEGRAUS[d].hex+'">'+(fig||'●')+' '+DEGRAUS[d].cod+' · '+DEGRAUS[d].nome+'</span>';
   }
-  const nomes=DEGRAUS_EM_USO.map(function(d){
+  const usados=["d1","d2","d3","d4","d5"].filter(function(d){
+    return BANCO.some(function(q){return !!q[d]});
+  });
+  const nomes=usados.map(function(d){
     return pastDeg(d, d==="d5"?"◆":"●");
   });
+  const porTema=BANCO.map(function(q){return degrausDe(q).length});
+  const minD=Math.min.apply(null,porTema), maxD=Math.max.apply(null,porTema);
+  const quantos = (minD===maxD) ? (minD+" degraus") : (minD+" a "+maxD+" degraus");
   const d01=DEGRAUS.d1?pastDeg("d1","●"):'D01';
   const MAXD=Math.max.apply(null,BANCO.map(function(q){return degrausDe(q).length}));
   const nAulas=AULAS.filter(function(a){return BANCO.some(function(q){return q.aula===a.id})}).length;
@@ -3427,7 +3570,7 @@ function telaAbertura(){
   '<h1>Revisão · 6º ano</h1>'+
   '<h2>3º bimestre · Unidade 01 · '+UNIDADE+'</h2>'+
   '<p>Esta revisão passa por <b>'+BANCO.length+' temas</b> da unidade, em <b>'+nAulas+' partes</b>. '+
-  'Cada tema é quebrado em <b>'+DEGRAUS_EM_USO.length+' degraus</b>: '+nomes.join(" ")+'. '+
+  'Cada tema é quebrado em <b>'+quantos+'</b>, escolhidos pelo que aquele tema pede: '+nomes.join(" ")+'. '+
   'São <b>'+totalDoBanco()+' perguntas</b> no total.</p>'+
   TXT_ORIGEM()+
   '<div class="campo"><label>1 · Sua turma</label><div class="turmagrid">'+botoesTurma()+'</div></div>'+
@@ -3440,7 +3583,7 @@ function telaAbertura(){
 
   '<div class="cards">'+
   cardR("#7B2D8E","🧭","Como você anda","Só existe um caminho: o botão da barra de baixo. Voltar e refazer não dá, e a lista completa abre no fim.")+
-  cardR("#F0C419","📶","Como cada tema é quebrado","Cada tema vira "+DEGRAUS_EM_USO.length+" perguntas, uma por degrau. O degrau da tela aparece sempre no topo, em letra grande.")+
+  cardR("#F0C419","📶","Como cada tema é quebrado","Cada tema vira "+quantos+", um por degrau, e nem todo tema usa os mesmos. O degrau da tela aparece sempre no topo, em letra grande.")+
   cardR("#E07B2C","🎯","Quantas tentativas","Você tem até "+MAX_TENT+" em cada pergunta. A cada erro, as alternativas mudam. Elas têm tamanhos parecidos de propósito: não dá para chutar pela maior.")+
   cardR("#2E8C7A","💠","A ajuda do <span class=\'bitnome-card\'>BIT</span>","🤖 Oi, eu sou o <b class=\'bitnome-card\'>BIT</b>. Tenho três trilhas. A cada erro você precisa terminar uma delas, sempre diferente da anterior. As alternativas ficam travadas até você chegar ao fim da trilha.")+
   cardR("#2E5C8A","📖","As pastilhas","Toda palavra difícil tem pastilha, e ela abre em abas: você lê todas antes de fechar. A palavra principal da pergunta fica dourada e precisa ser lida ANTES de responder. A cada erro, o BIT libera até duas palavras novas para ler.")+
@@ -3532,6 +3675,56 @@ function checarAcordo(){
 }
 
 /* ==================== CAPA ==================== */
+function objetivosDaAula(id){
+  const a=(AULAS.filter(function(x){return x.id===id})[0])||{};
+  return String(a.objetivo||"").split(/\.\s+/).filter(function(x){return x.trim()})
+         .map(function(o){ return o.replace(/\.$/,"") });
+}
+function telaObjetivos(r){
+  const nome=nomeAula(r.aula), cor=corAula(r.aula);
+  const objs=objetivosDaAula(r.aula);
+  const its=roteiro.filter(function(x){return x.t==="perg"&&x.aula===r.aula});
+  const porObj=Math.max(1,Math.ceil(its.length/Math.max(objs.length,1)));
+  let cards="";
+  objs.forEach(function(o,i){
+    const meus=its.slice(i*porObj,(i+1)*porObj);
+    const feitas=meus.filter(function(x){return registro[x.n]}).length;
+    const ac=meus.filter(function(x){return registro[x.n]&&registro[x.n].tent===1}).length;
+    const pronto=(meus.length&&feitas===meus.length);
+    const agora=(!pronto && meus.some(function(x){return !registro[x.n]}) &&
+                 (i===0 || its.slice(0,i*porObj).every(function(x){return registro[x.n]})));
+    cards+='<div class="opcard'+(pronto?" feito":(agora?" proximo":""))+'">'+
+      '<div class="optopo"><span class="opmk">'+(pronto?"✅":(agora?"◉":"🔒"))+'</span>'+
+      '<span class="opsel">OBJETIVO '+(i+1)+' DE '+objs.length+
+      (pronto?" · CONQUISTADO":(agora?" · É AGORA":" · AINDA VEM"))+'</span></div>'+
+      '<div class="optit">'+o+'</div>'+
+      '<div class="opsub">'+meus.length+' pergunta'+(meus.length>1?'s':'')+' desta aula'+
+      (feitas?(' · '+ac+' de primeira'):'')+'</div>'+
+      (pronto
+        ? '<div class="opnota ok">✅ Fechado. Você já passou por todas as perguntas deste objetivo.</div>'
+        : (agora
+          ? '<div class="opnota agora">◉ É o que você conquista nas próximas telas.</div>'
+          : '<div class="opnota">🔒 Abre quando você terminar o objetivo anterior.</div>'))+
+      '</div>';
+  });
+  document.getElementById("palco").innerHTML=
+   '<div class="card"><div class="capa-top" style="background:'+cor+'">'+
+   '<div class="capa-k">'+nome.toUpperCase()+' · OBJETIVOS</div>'+
+   '<h2>O que você vai conseguir nesta aula</h2></div>'+
+   '<p class="intro-obj">São '+objs.length+' objetivos. Cada um fecha quando você termina '+
+   'as perguntas dele.</p>'+
+   (function(){
+      const feitosT=objs.filter(function(o,i){
+        const m=its.slice(i*porObj,(i+1)*porObj);
+        return m.length && m.every(function(x){return registro[x.n]});
+      }).length;
+      return '<div class="objbar"><div class="objbar-in" style="width:'+
+        Math.round(feitosT/Math.max(objs.length,1)*100)+'%;background:'+cor+'"></div></div>'+
+        '<div class="objcont">'+feitosT+' de '+objs.length+' objetivos conquistados</div>';
+   })()+
+   '<div class="objs">'+cards+'</div>'+
+   '<div id="chamada"></div></div>';
+}
 function telaPausa(r){
   const nome=nomeAula(r.aula), cor=corAula(r.aula);
   const daAula=roteiro.filter(function(x){return x.t==="perg"&&x.aula===r.aula});
@@ -3541,6 +3734,8 @@ function telaPausa(r){
    '<div class="capa-k">PAUSA</div><h2>'+nome+' · fim da aula</h2></div>'+
    balaoPersona(P_LUA,"Você fechou esta aula com "+ac+" de "+daAula.length+
      " acertos de primeira. «Respire» um pouco antes de seguir.")+
+   balaoPersona(elencoDaTela().erro,
+     "Agora é a minha vez. Um minuto de jogo e a gente segue.")+
    '<div class="jogobox" id="jogoBox">'+
      '<div class="jogo-vazio">'+
        '<div class="jv-emo">🎮 🕹️</div>'+
@@ -3552,44 +3747,101 @@ function telaPausa(r){
    '</div>'+
    '<div id="chamada"></div></div>';
   setTimeout(function(){ abrirJogoDaPausa(r.aula) },80);
+  if(AULA_REFAZENDO===r.aula){
+    const fim=AULA_REFAZENDO; AULA_REFAZENDO=null;
+    setTimeout(function(){ proximaAulaDepois(fim) },600);
+  }
 }
 function telaCapa(r){
-  const qs=BANCO.filter(function(q){return q.aula===r.aula});
-  const a=AULAS.filter(function(x){return x.id===r.aula})[0]||{};
-  function campo(rot,val){
-    return val?('<p style="font-size:16px;margin-bottom:6px"><b>'+rot+':</b> '+val+'</p>'):
-      (MODO_TESTE?('<p style="font-size:16px;margin-bottom:6px;color:#B3001B"><b>'+rot+
-       ':</b> falta o escopo</p>'):'');
-  }
+  const nome=nomeAula(r.aula), cor=corAula(r.aula);
+  const a=(AULAS.filter(function(x){return x.id===r.aula})[0])||{};
+  const its=roteiro.filter(function(x){return x.t==="perg"&&x.aula===r.aula});
+  const temas={}; its.forEach(function(x){ temas[BANCO[x.qi].ordem]=BANCO[x.qi].titulo });
+  const listaTemas=Object.keys(temas).map(function(k){
+    return '<li><b>tema '+k+'</b> · '+temas[k]+'</li>' }).join("");
+  const hab=(a.hab||a.habilidade||"");
   document.getElementById("palco").innerHTML=
-  '<div class="card" style="border-top:8px solid '+corAula(r.aula)+'">'+
-  '<div style="font-size:16px;font-weight:900;color:'+corAula(r.aula)+
-  ';letter-spacing:1px;margin-bottom:4px">CAPA DA AULA · UNIDADE 01</div>'+
-  '<div style="font-size:17px;font-weight:800;color:var(--verde-esc);margin-bottom:6px">'+UNIDADE+'</div>'+
-  '<h1 style="color:'+corAula(r.aula)+'">'+(a.titulo||nomeAula(r.aula))+'</h1>'+
-  campo("Aula na unidade",a.naUnidade)+
-  campo("Aula na Sala do Futuro",a.naSala)+
-  campo("Formato da aula",a.formato)+
-  campo("Objetivo",a.objetivo)+
-  campo("Conteúdos",a.conteudos)+
-  campo("BNCC",bnccCompleto(a.bncc))+
-  '<p style="margin-top:12px">Esta aula tem <b>'+qs.length+(qs.length===1?' tema':' temas')+'</b>, ou seja <b>'+
-  qs.reduce(function(a,x){return a+degrausDe(x).length},0)+' perguntas</b>.</p>'+
-  '<p style="font-size:16px;color:var(--cinza)">'+qs.map(function(q){return q.titulo}).join(" · ")+'.</p>'+
-  balaoPersona(P_CURUPIRA, escolheFala(FALA_CAPA, r.aula.charCodeAt(2)))+
-  '<div id="chamada"></div></div>';
+   '<div class="card"><div class="capa-top" style="background:'+cor+'">'+
+   '<div class="capa-k">'+(UNIDADE_TXT||"UNIDADE 1")+' · '+nome.toUpperCase()+'</div>'+
+   '<h2>O que esta aula cobra de você</h2></div>'+
+   '<div class="capagrid">'+
+     '<div class="capacard" style="border-top-color:'+cor+'">'+
+       '<div class="cc-t" style="color:'+cor+'">🎯 Objetivo</div>'+
+       '<div class="cc-c">'+(a.objetivo||"—")+'</div></div>'+
+     '<div class="capacard" style="border-top-color:#4A8C3F">'+
+       '<div class="cc-t" style="color:#4A8C3F">📚 Conteúdos</div>'+
+       '<div class="cc-c">'+(a.conteudo||a.conteudos||"—")+'</div></div>'+
+     '<div class="capacard" style="border-top-color:#6B4B9C">'+
+       '<div class="cc-t" style="color:#6B4B9C">🧩 Habilidade</div>'+
+       '<div class="cc-c">'+(hab||"—")+'</div></div>'+
+   '</div>'+
+   '<div class="capapill">'+
+     '<span class="cp">📖 '+Object.keys(temas).length+' temas</span>'+
+     '<span class="cp">❓ '+its.length+' perguntas</span>'+
+     '<span class="cp">🎮 termina com jogo</span>'+
+   '</div>'+
+   '<h3 style="margin-top:16px">Os temas desta aula</h3>'+
+   '<ul class="temalist">'+listaTemas+'</ul>'+
+   '<div id="chamada"></div></div>';
 }
 
-/* ==================== TRES CARTOES ==================== */
+const UNIDADE_TXT="UNIDADE 1 · 3º BIMESTRE";
 let PAINEL_VISTO={};
 function painel(id){
   PAINEL_VISTO[id]=true;
   const bt=document.querySelector('.btnpainel[data-p="'+id+'"]');
   if(bt) bt.classList.add("visto");
-  ["p1","p2","p3"].forEach(function(x){
+  ["p1","p2","p3","p4"].forEach(function(x){
     const o=document.getElementById(x);if(!o)return;
     if(x===id) o.classList.toggle("abre"); else o.classList.remove("abre");
   });
+}
+function tabelaPersonagens(){
+  const linhas=[
+   ["🤖 BIT / 👩‍🔬 B.IA","ajuda","quando você erra e abre uma trilha","o mesmo o tempo todo"],
+   ["🧜‍♀️ IARA","guarda a palavra","antes de responder, se houver palavra nova","aula 1"],
+   ["🐊 CUCA","guarda a palavra","antes de responder","aula 3"],
+   ["🐍 BOITATÁ","guarda a palavra","antes de responder","aula 5"],
+   ["🐴 MULA SEM CABEÇA","guarda a palavra","antes de responder","aula 7"],
+   ["🐺 LOBISOMEM","guarda o caminho","enquanto a tela não está cumprida","aula 1"],
+   ["🐬 BOTO","guarda o caminho","enquanto a tela não está cumprida","aula 3"],
+   ["🦌 CAIPORA","guarda o caminho","enquanto a tela não está cumprida","aula 5"],
+   ["🐎 NEGRINHO","guarda o caminho","enquanto a tela não está cumprida","aula 7"],
+   ["🌪️ SACI","provoca no erro","quando você erra","aula 1"],
+   ["🌳 CURUPIRA","provoca no erro","quando você erra","aula 3"],
+   ["🦉 MATINTA","provoca no erro","quando você erra","aula 5"],
+   ["👹 BICHO-PAPÃO","provoca no erro","quando você erra","aula 7"],
+   ["🦜 🦋 🐠 🐆","comemora","quando você acerta de primeira","muda por aula"],
+   ["🐢 🐸 🦀 🐒","comemora","quando você acerta na segunda","muda por aula"],
+   ["🐝 🐞 🐌 🦅","comemora","quando você acerta na terceira","muda por aula"],
+   ["🐜 🦆 🐟 🐦","comemora","quando você acerta na quarta","muda por aula"],
+   ["🌙 LUA","fecha a aula","no placar de cada aula","o mesmo o tempo todo"],
+   ["🎩 🔮 🎴","convida","antes de você escolher a trilha","muda a cada trilha"]
+  ];
+  return '<h3 style="margin-top:16px">🎭 Quem aparece nesta revisão</h3>'+
+    '<p style="font-size:16px">Cada personagem tem um papel só. O papel não muda; '+
+    'quem faz o papel muda conforme a aula.</p>'+
+    '<table class="tabela tabpers"><tr><th>Personagem</th><th>Papel</th>'+
+    '<th>Quando aparece</th><th>Onde</th></tr>'+
+    linhas.map(function(l){
+      return '<tr><td><b>'+l[0]+'</b></td><td>'+l[1]+'</td><td>'+l[2]+'</td><td>'+l[3]+'</td></tr>';
+    }).join("")+'</table>';
+}
+function origemDaPergunta(q,r){
+  const d=DEGRAUS[r.deg];
+  const ehOficial=(r.deg==="d5");
+  return '<div class="origempg">'+
+    '<div class="op-t">🧭 De onde veio esta pergunta</div>'+
+    '<div class="op-linha">'+
+      '<span class="op-passo">📘 <b>Aula</b><br>'+nomeAula(q.aula)+'</span>'+
+      '<span class="op-seta">→</span>'+
+      '<span class="op-passo">📝 <b>Questão da prova</b><br>tema '+q.ordem+' · '+q.titulo+'</span>'+
+      '<span class="op-seta">→</span>'+
+      '<span class="op-passo'+(ehOficial?" op-aqui":"")+'">'+
+        (ehOficial?'🎯 <b>Esta é a pergunta da prova</b><br>com as alternativas oficiais'
+                  :'🪜 <b>Degrau '+d.cod+'</b><br>um passo antes da pergunta da prova')+
+      '</span>'+
+    '</div></div>';
 }
 function cartoes(q,r){
   const d=degrauDaTela(r);
@@ -3597,10 +3849,10 @@ function cartoes(q,r){
   const par=ESCADA_D.filter(function(x){return x.cod===d.cod})[0];
   let h='<div class="trio">'+
     '<button class="t1 btnpainel'+(PAINEL_VISTO.p1?" visto":"")+'" data-p="p1" onclick="painel(\'p1\')">🔍 PARA SABER MAIS</button>'+
-    '<button class="t2 btnpainel'+(PAINEL_VISTO.p2?" visto":"")+'" data-p="p2" onclick="painel(\'p2\')">🎓 POR TRÁS DA PERGUNTA</button>'+
+    '<button class="t2 btnpainel'+(PAINEL_VISTO.p2?" visto":"")+'" data-p="p2" onclick="painel(\'p2\')">🎓 COMO A PERGUNTA FOI FEITA</button>'+
     '<button class="t3 btnpainel'+(PAINEL_VISTO.p3?" visto":"")+'" data-p="p3" onclick="painel(\'p3\')">🌎 ALÉM DA AULA</button>'+
     (q.codigo? '<button class="t4 btnpainel'+(PAINEL_VISTO.p4?" visto":"")+'" data-p="p4" '+
-     'onclick="painel(\'p4\')">🎨 COMO O CÓDIGO É ESCRITO</button>':'')+
+     'onclick="painel(\'p4\')">🎨 COMO A TELA FUNCIONA</button>':'')+
     '</div>';
 
   h+='<div class="painel" id="p1"><h3>🧠 As palavras do método</h3>'+
@@ -3634,9 +3886,10 @@ function cartoes(q,r){
      '<div class="coritem">✔ <b style="color:#F2CC60">NÚMERO</b> · em amarelo</div>'+
      '<div class="coritem">✔ <b style="color:#D2A8FF">NOME DE FUNÇÃO</b> · em roxo</div>'+
      '</div>'+
+     tabelaPersonagens()+
      '<div class="fechapainel"><button class="btn" onclick="painel(\'p4\')">Fechar ✓</button></div></div>';
 
-  h+='<div class="painel" id="p2"><h3>Onde esta pergunta está na escada</h3><div class="regua">';
+  h+='<div class="painel" id="p2">'+origemDaPergunta(q,r)+'<h3>Onde esta pergunta está na escada</h3><div class="regua">';
   ESCADA_D.slice().reverse().forEach(function(e){
     const k=Object.keys(DEGRAUS).filter(function(x){return DEGRAUS[x].cod===e.cod})[0];
     const cor=k?DEGRAUS[k].hex:BLOOM_COR[e.b];
@@ -3682,17 +3935,36 @@ function cartoes(q,r){
        '<p style="font-size:16px">Técnica do repertório do livro <i>Aula Nota 10</i>. '+
        'Ela é o jeito de pôr a categoria CFU em prática dentro da sala.</p>';
   }
-  h+='<h3 style="margin-top:14px">Bloom</h3>';
+  const BLOOM_FAZ={B1:"lembrar o que foi visto",B2:"explicar com as próprias palavras",
+    B3:"usar a regra num caso novo",B4:"separar as partes e achar o erro",
+    B5:"julgar qual serve melhor",B6:"criar uma solução própria"};
+  h+='<h3 style="margin-top:14px">Bloom · o que a pergunta exige da cabeça</h3>';
   ["B6","B5","B4","B3","B2","B1"].forEach(function(b){
     const aq=(b===par.b), nb=parseInt(b.slice(1),10);
-    h+='<div class="pir" style="background:'+BLOOM_COR[b]+';width:'+(100+((7-nb)*30))+'px;'+
-       'opacity:'+(aq?1:.5)+';'+(aq?'outline:3px solid var(--tinta);':'')+'"><b>'+b+'</b> '+
-       BLOOM_NOME[b]+(aq?' ◀ esta pergunta':'')+'</div>';
+    h+='<div class="pir duas'+(aq?' pulsa':'')+'" style="background:'+BLOOM_COR[b]+';width:'+
+       (100+((7-nb)*30))+'px;min-width:230px;'+'opacity:'+(aq?1:.5)+';'+
+       (aq?'outline:3px solid var(--tinta);':'')+'">'+
+       '<b>'+b+' '+BLOOM_NOME[b]+(aq?' ◀ esta pergunta':'')+'</b>'+
+       '<span>'+BLOOM_FAZ[b]+'</span></div>';
   });
-  h+='<h3 style="margin-top:14px">Maslow</h3>';
+  const MAS_FAZ={M1:"o corpo em dia: comer, dormir, se mexer",
+    M2:"sentir-se seguro, sem medo e sem risco",
+    M3:"pertencer ao grupo, ter com quem contar",
+    M4:"ser reconhecido pelo que sabe fazer",
+    M5:"virar quem ele quer ser"};
+  const alvoM=maslowDaSituacao(q);
+  h+='<h3 style="margin-top:14px">Maslow · o que a situação toca na vida dele</h3>';
   MASLOW.forEach(function(m){
-    h+='<div class="mas" style="background:'+m.cor+';width:'+(100+((6-m.n)*30))+'px">'+m.cod+' '+m.nome+'</div>';
+    const aq=(m.cod===alvoM);
+    h+='<div class="mas duas'+(aq?' pulsa':'')+'" style="background:'+m.cor+';width:'+
+       (100+((6-m.n)*30))+'px;min-width:250px;opacity:'+(aq?1:.5)+';'+
+       (aq?'outline:3px solid var(--tinta);':'')+'">'+
+       '<b>'+m.cod+' '+m.nome+(aq?' ◀ esta situação':'')+'</b>'+
+       '<span>'+MAS_FAZ[m.cod]+'</span></div>';
   });
+  h+='<p style="font-size:16px">A escada de Bloom mede o que a <b>pergunta</b> exige. '+
+     'A de Maslow mostra o que a <b>situação do texto</b> mexe na vida de quem lê. '+
+     'São coisas diferentes, por isso as duas aparecem.</p>';
   const FOCO={D01:"achar a informação na tela",D02:"nomear o elemento certo",
               D03:"aplicar a regra num caso novo",D04:"julgar o que quebra",
               D05:"justificar a escolha"};
@@ -3795,12 +4067,41 @@ function sequenciaDePares(deg,chave){
 const CACHE_VF={};
 function parOficialVF(deg,t,qi){
   const q=BANCO[qi];
-  if(deg.alts.length<=2){
-    // questão que nasce V/F: usa as frases justificadas do banco do tema
-    const fonte = (q && q.d4 && q.d4.ok && q.d4.no) ? q.d4
-                : (q && q.d3 && q.d3.ok && q.d3.no) ? q.d3 : null;
-    if(fonte) return parDaTentativa(fonte,t,qi+"_vf");
-    return {alts:deg.alts.slice(),cert:deg.cert,afirma:null};
+  if(!deg.alts || deg.alts.length<=2){
+    // questão que nasce V/F: usa as frases justificadas do banco do tema.
+    // O par entra deslocado, para não repetir o que já saiu no degrau anterior.
+    // o D05 escolhe a fonte que o degrau anterior NÃO usou, para não repetir
+    const antes=degrausDe(q).filter(function(x){return x!=="d5"});
+    const usadoAntes=antes[antes.length-1];
+    let fonte=null;
+    ["d4","d3","d2","d1"].forEach(function(dg){
+      if(fonte) return;
+      if(dg===usadoAntes) return;
+      if(q && q[dg] && q[dg].ok && q[dg].no && q[dg].ok.length) fonte=q[dg];
+    });
+    if(!fonte) ["d4","d3","d2","d1"].forEach(function(dg){
+      if(!fonte && q && q[dg] && q[dg].ok && q[dg].no && q[dg].ok.length) fonte=q[dg];
+    });
+    if(fonte){
+      // o D05 usa os pares que o degrau dono da lista NÃO mostrou
+      const seq=sequenciaDePares(fonte,qi+"_"+(fonte.p||"").length);
+      const usados={}; seq.forEach(function(p){ usados[p.i+"|"+p.j]=1 });
+      const livres=[];
+      fonte.ok.forEach(function(c,i){ fonte.no.forEach(function(e,j){
+        if(!usados[i+"|"+j]) livres.push({i:i,j:j}) }) });
+      const lista=(livres.length>=2)?livres:seq;
+      const p=lista[(t-1)%lista.length];
+      const A=fonte.ok[p.i], B=fonte.no[p.j];
+      return (Math.random()<0.5)?{alts:[A,B],cert:0,afirma:null}
+                                :{alts:[B,A],cert:1,afirma:null};
+    }
+    if(deg.alts && deg.alts.length>=2)
+      return {alts:deg.alts.slice(),cert:deg.cert,afirma:null};
+    const certa="O que o colega disse se confirma no programa.";
+    const errada="O que o colega disse não se confirma no programa.";
+    const ehV=(deg.cert===0);
+    const par=ehV?[certa,errada]:[errada,certa];
+    return {alts:par,cert:par.indexOf(ehV?certa:errada),afirma:(q&&q.fala)?q.fala:null};
   }
   // questão de 4 alternativas: duas oficiais por vez, a certa e um distrator.
   // os distratores entram do mais parecido em tamanho para o menos parecido,
@@ -4087,11 +4388,23 @@ function textoMontado(q){
   return h;
 }
 function voltarParte(i){ iTela=i; tentAtual=1; render() }
+let PARES_USADOS={}, TEMA_ULT=null;
 function parDaTentativa(deg,t,chave){
   const seq=sequenciaDePares(deg,chave||"x");
   // o ponto de partida muda de estudante para estudante
   const giro=semente()%seq.length;
-  const p=seq[(giro+t-1)%seq.length];
+  // dentro de um tema, um par nunca se repete noutro degrau
+  const qiT=String(chave||"").split("_")[0];   // o tema, não o degrau
+  const usados=PARES_USADOS[qiT]||{};
+  let p=null;
+  for(let k=0;k<seq.length;k++){
+    const cand=seq[(giro+t-1+k)%seq.length];
+    const ch=String(deg.ok[cand.i])+"|"+String(deg.no[cand.j]);
+    if(!usados[ch]){ p=cand; usados[ch]=true; PARES_USADOS[qiT]=usados; break }
+  }
+  if(!p){ p=seq[(giro+t-1)%seq.length];
+          usados[String(deg.ok[p.i])+"|"+String(deg.no[p.j])]=true;
+          PARES_USADOS[qiT]=usados }
   const cert=deg.ok[p.i],err=deg.no[p.j];
   return (Math.random()<0.5)?{alts:[cert,err],cert:0,afirma:null}
                             :{alts:[err,cert],cert:1,afirma:null};
@@ -4141,6 +4454,21 @@ function telaPergunta(r){
   h+='<div style="font-size:16px;color:var(--cinza);font-weight:800;margin-bottom:8px">'+
      nomeAula(q.aula)+' · tema '+q.ordem+' de '+BANCO.length+TXT_QREF(q)+'</div>';
 /* ---- termos do glossário viram pastilha clicável DENTRO do texto ---- */
+function qd_chaves(q){
+  const t=((q.contexto||"")+" "+(q.titulo||"")).toLowerCase();
+  const c=[];
+  if(/lista|matriz|vetor/.test(t)) c.push("a estrutura que guarda");
+  if(/repet|laço|while|for|repita/.test(t)) c.push("a repetição");
+  if(/condi|se |if|verdadeiro|comparar/.test(t)) c.push("a condição");
+  if(/aleat|sorte|random/.test(t)) c.push("o sorteio");
+  c.push("o porquê de cada escolha");
+  return c.slice(0,3);
+}
+function marcarVeredito(txt){
+  return String(txt||"")
+    .replace(/^(Verdadeir[ao])[,.:]?\s*/i,'<b class="jVerd">$1,</b> ')
+    .replace(/^(Fals[ao])[,.:]?\s*/i,'<b class="jFalso">$1,</b> ');
+}
 function marcarTermos(txt,q){
   if(!txt||!q.glossario) return txt;
   const qi=BANCO.indexOf(q);
@@ -4154,7 +4482,9 @@ function marcarTermos(txt,q){
       const re=new RegExp("(?<![\\wÀ-ú])("+esc+")(?![\\wÀ-ú])","i");
       if(!re.test(partes[k])) return;
       partes[k]=partes[k].replace(re,
-        '<span class="tchip" role="button" tabindex="0" onclick="event.stopPropagation();abrirG('+qi+','+o.i+')">$1</span>');
+        '<span class="tchip t-'+tipoDoTermo(o.t,BANCO[qi]).k+'" role="button" tabindex="0" '+
+        'title="'+tipoDoTermo(o.t,BANCO[qi]).rot+'" '+
+        'onclick="event.stopPropagation();abrirG('+qi+','+o.i+')">$1</span>');
     });
   }
   return partes.join("");
@@ -4210,6 +4540,11 @@ function contextoEmDuas(ctx){
        '<div class="balao">“'+marcarTermos(q.fala,q)+'”</div></div>';
 
   if(r.deg==="d5"&&!(q.disc&&parAtual.partes)){
+    if(q.disc&&parAtual.partes){
+      const degsF=degrausDe(q), npF=degsF.indexOf(r.deg)+1;
+      h+='<div class="croxo"><h3>Parte '+npF+' de '+degsF.length+' da sua resposta</h3>'+
+         '<p>Escolha o trecho que continua o texto com sentido.</p>';
+    } else
     h+='<div class="croxo"><h3>Pergunta final deste tema</h3><p>'+pergComEmoji(deg.p)+'</p>';
     if(parAtual.afirma)
       h+='<div class="afirma"><b>Esta afirmação está certa ou errada?</b><br>'+parAtual.afirma+'</div>';
@@ -4234,6 +4569,14 @@ function contextoEmDuas(ctx){
   if(q.disc&&parAtual.partes){
     h+=textoEmConstrucao(q,r);
     const dg=degrausDe(q), np=dg.indexOf(r.deg)+1;
+    if(q.disc&&parAtual.partes){
+      const degs=degrausDe(q), np=degs.indexOf(r.deg)+1;
+      h+='<h3 style="margin-top:14px">Parte '+np+' de '+degs.length+
+         ' da sua resposta ❓<br><span style="font-weight:700;font-size:17px">'+
+         'Escolha o trecho que continua o texto com sentido.</span></h3>'+
+         '<div class="chavesdisc">🔑 A sua resposta precisa citar: '+
+         (qd_chaves(q).map(function(c){return '<b>'+c+'</b>'}).join(' · '))+'</div>';
+    } else
     h+='<h3 style="margin-top:14px">'+pergComEmoji(deg.p)+'</h3>';
     h+='<div class="afirma"><b>Parte '+np+' de '+dg.length+' da sua resposta.</b><br>'+
        'Escolha o trecho que continua o texto com sentido. No fim, os cinco trechos viram a sua resposta.</div>';
@@ -4246,16 +4589,22 @@ function contextoEmDuas(ctx){
   h+='<div id="alts">'+parAtual.alts.map(function(a,i){
        return '<button class="alt" id="alt'+i+'" onclick="responder('+i+')">'+
               '<span class="altletra">'+String.fromCharCode(65+i)+'</span>'+
-              '<span class="frase">'+marcarTermos(a,q)+'</span></button>'}).join("")+'</div>';
+              '<span class="frase">'+marcarVeredito(marcarTermos(a,q))+'</span></button>'}).join("")+'</div>';
   h+='<div id="travaBox"></div>';
   if(r.deg==="d4") h+='<div class="cazul">🔎 Atenção ao ponto de vista: a resposta é <b>sobre a fala do colega</b>, não sobre o programa inteiro.</div>';
   h+='</div>';                       // fecha a coluna principal
   h+='<div class="col-lat">'+
      '<div class="cardlat cl-dica"><div class="cl-t">💡 Dica</div><div class="cl-c">'+
        ((r.deg==="d5"&&q.d5.dica)?q.d5.dica:d.dica)+'</div></div>'+
-     '<div class="cardlat cl-glos"><div class="cl-t">📘 Glossário</div><div class="cl-c">'+
+     '<div class="cardlat cl-glos"><div class="cl-t">📘 Glossário</div>'+
+     '<div class="legtipo"><span class="lt t-cmd">comando</span>'+
+     '<span class="lt t-conc">conceito</span>'+
+     '<span class="lt t-enun">palavra do texto</span></div>'+
+     '<div class="cl-c">'+
        q.glossario.map(function(g,i){
-         return '<p><button type="button" class="tchip" onclick="abrirG('+BANCO.indexOf(q)+','+i+')">'+
+         const tp=tipoDoTermo(g.t,q);
+         return '<p><button type="button" class="tchip t-'+tp.k+'" title="'+tp.rot+
+                '" onclick="abrirG('+BANCO.indexOf(q)+','+i+')">'+
                 g.t+'</button> · '+g.d.split(/(?<=\.)\s+/)[0]+'</p>'}).join("")+
      '</div></div>'+
      '<div id="latsoc"></div>'+
@@ -4263,6 +4612,16 @@ function contextoEmDuas(ctx){
   h+='<div id="pos"></div><div id="ajuda">'+blocoAjuda(r)+'</div>'+
      '<div id="chamada"></div>'+cartoes(q,r)+'</div>';
   document.getElementById("palco").innerHTML=h;
+  if(MODO_CONSULTA && registro[r.n]){
+    travarAlternativas();
+    const cx=document.getElementById("travaBox");
+    if(cx) cx.innerHTML='<div class="travaj termo">👀 <span class="yfala">'+
+      '<b>Você está só conferindo esta tela.</b> Você acertou na tentativa '+
+      registro[r.n].tent+'. Para responder de novo, é só no placar final.</span></div>';
+    const pr=document.getElementById("btProx");
+    if(pr){ pr.disabled=false }
+    return;
+  }
   pintarTrava(q,r); marcarObrigatorias(q,r);
   if(ajudaObrigatoria()){
     travarAlternativas();
@@ -4276,11 +4635,16 @@ function responder(i){
   if(respondeuAgora) return;
   depoisDaAjuda="";
   respondeuAgora=true;
-  const r=roteiro[iTela],certo=(i===parAtual.cert);
+  const r=roteiro[iTela];
+  // na discursiva há cinco frases certas: qualquer uma delas vale
+  const certo = (parAtual.certos && parAtual.certos.length)
+              ? !!parAtual.certos[i]
+              : (i===parAtual.cert);
   parAtual.alts.forEach(function(a,k){
     const b=document.getElementById("alt"+k);if(!b)return;
     b.disabled=true;
-    if(k===parAtual.cert) b.classList.add("certo");
+    const kOk = (parAtual.certos&&parAtual.certos.length) ? !!parAtual.certos[k] : (k===parAtual.cert);
+    if(kOk) b.classList.add("certo");
     else if(k===i) b.classList.add("errado");
   });
   let h="";
@@ -4314,7 +4678,7 @@ function responder(i){
     if(dd && dd.ok && dd.ok.length){
       const vistas={}; (parAtual.alts||[]).forEach(function(x){vistas[x]=1});
       const nova=dd.ok.filter(function(x){return !vistas[x]})[0]||dd.ok[dd.ok.length-1];
-      h+='<div class="resposta4"><div class="r4-t"><span class="bitav">🤖</span>'+
+      h+='<div class="resposta4"><div class="r4-t"><span class="bitav">'+figuraAjudante(nomeAjudante())+'</span>'+
          '<span class="bitnome">BIT</span> · A resposta era esta</div>'+
          '<p>'+nova+'</p><div class="r4-p">'+(dd.dica||"")+'</div></div>';
     }
@@ -4391,6 +4755,17 @@ function ajudaObrigatoria(){
   const r=roteiro[iTela]; if(!r||r.t!=="perg") return false;
   return !podeResponder(BANCO[r.qi],r);
 }
+const SVG_BIT='<svg class="perso-svg" viewBox="0 0 70 76" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BIT">   <rect x="30" y="14" width="10" height="14" rx="5" fill="#7FB7DD"/>   <circle cx="35" cy="12" r="5" fill="#2E9BE0"/>   <rect x="12" y="26" width="46" height="36" rx="13" fill="#2E9BE0"/>   <rect x="17" y="32" width="36" height="20" rx="9" fill="#12233A"/>   <circle cx="27" cy="42" r="5" fill="#7FE0A8"/><circle cx="43" cy="42" r="5" fill="#7FE0A8"/>   <rect x="28" y="55" width="14" height="3" rx="1.5" fill="#12233A" opacity=".55"/>   <rect x="4" y="34" width="8" height="18" rx="4" fill="#1F6FA8"/>   <rect x="58" y="34" width="8" height="18" rx="4" fill="#1F6FA8"/></svg>';
+const SVG_BIA='<svg class="perso-svg" viewBox="0 0 70 76" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="B.IA">   <rect x="30" y="14" width="10" height="14" rx="5" fill="#FFA8CC"/>   <circle cx="35" cy="12" r="5" fill="#FF5FA2"/>   <rect x="12" y="26" width="46" height="36" rx="13" fill="#FF5FA2"/>   <rect x="17" y="32" width="36" height="20" rx="9" fill="#3B1030"/>   <circle cx="27" cy="42" r="5" fill="#FFE08A"/><circle cx="43" cy="42" r="5" fill="#FFE08A"/>   <rect x="28" y="55" width="14" height="3" rx="1.5" fill="#3B1030" opacity=".55"/>   <rect x="4" y="34" width="8" height="18" rx="4" fill="#D6337E"/>   <rect x="58" y="34" width="8" height="18" rx="4" fill="#D6337E"/></svg>';
+function figuraAjudante(nome){ return (nome==='B.IA')?SVG_BIA:SVG_BIT }
+function maslowDaSituacao(q){
+  const t=((q.contexto||"")+" "+(q.titulo||"")).toLowerCase();
+  if(/saúde|sono|dormir|corpo|comer|alimenta|exercício|física|cansaç/.test(t)) return "M1";
+  if(/segurança|senha|proteg|risco|perigo|privacidade|dados|golpe/.test(t)) return "M2";
+  if(/turma|equipe|amigo|colega|grupo|comunidade|dupla|todos|juntos/.test(t)) return "M3";
+  if(/nota|placar|reconhec|prêmio|ranking|melhor|destaque|competi/.test(t)) return "M4";
+  return "M5";
+}
 function nomeAjudante(){
   return (generoDoNome(estudante)==="F") ? "B.IA" : "BIT";
 }
@@ -4416,10 +4791,14 @@ function blocoAjuda(r){
     ? (primeira ? "Oi, eu sou o "+AJUD.nome+". Estou aqui para te ajudar a entender a pergunta, não para atrapalhar. Escolha um caminho."
                 : ABRE[idx % ABRE.length])
     : (AJ.lidas.length===1 ? SEGUNDA[idx % SEGUNDA.length] : TERCEIRA[idx % TERCEIRA.length]);
-  let h='<div class="luri"><div class="luri-t"><span class="bitav">'+AJUD.emo+'</span>'+
+  const fundoAj = (AJUD.nome==="B.IA")
+    ? "background:linear-gradient(160deg,#3B1030,#5B1E4A 55%,#4A2C7D);border-color:#8A3A6E"
+    : "";
+  let h='<div class="luri" style="'+fundoAj+'"><div class="luri-t"><span class="bitav">'+figuraAjudante(AJUD.nome)+'</span>'+
         '<span class="bitnome" style="color:'+(AJUD.nome==="B.IA"?"#FF5FA2":"#2E9BE0")+'">'+
         AJUD.nome+'</span></div>'+
-        '<div class="bitbalao">'+falaBit+'</div>'+
+        '<div class="bitbalao"'+(AJUD.nome==="B.IA"
+   ? ' style="background:#4A1638;border-color:#8A3A6E"' : '')+'>'+falaBit+'</div>'+
         (function(){
            const precisa=Math.min(Math.max(tentAtual-1,0),3);
            if(!precisa) return '<div class="luri-s">A trilha vem em pedacinhos: leia um, espere liberar e toque em «próxima dica».</div>';
@@ -4435,9 +4814,11 @@ function blocoAjuda(r){
     if(!T[t.id]) return;
     const on=(AJ.trilha===t.id);
     const lida=(AJ.lidas.indexOf(t.id)>=0);
+    const qual=(AJ.quando&&AJ.quando[t.id])?(" na "+AJ.quando[t.id]+"ª"):"";
     const faltando=(!lida && ajudaObrigatoria());
     h+='<button class="aba aj'+(on?" on":"")+(lida?" fim":"")+(faltando?" pede":"")+
-       '" title="'+t.t+'" onclick="abrirTrilha(\''+t.id+'\')">'+t.r+(lida?' ✓':'')+'</button>';
+       '" title="'+t.t+(lida?(" · lida"+qual+" tentativa"):"")+'" onclick="abrirTrilha(\''+t.id+'\')">'+
+       t.r+(lida?(' ✓'+qual):'')+'</button>';
   });
   h+='</div><div id="tr">'+(AJ.trilha?"":'<div class="vaziodica"><span class="vd-mao">👆</span>'+
         '<span class="pcena"><span class="pav chama">'+magiaDaVez().emo+'</span>'+
@@ -4569,7 +4950,10 @@ function mostrarFatia(){
 function proxFatia(){ AJ.pos=(AJ.ate!==undefined?AJ.ate:AJ.pos)+1; mostrarFatia() }
 function fimTrilha(){
   AJ.fim=true;
-  if(AJ.lidas.indexOf(AJ.trilha)<0) AJ.lidas.push(AJ.trilha);
+  if(AJ.lidas.indexOf(AJ.trilha)<0){
+    AJ.lidas.push(AJ.trilha);
+    AJ.quando=AJ.quando||{}; AJ.quando[AJ.trilha]=tentAtual;
+  }
   const r=roteiro[iTela], q=BANCO[r.qi];
   // se a leitura era tudo que faltava, a próxima tentativa entra sozinha
   if(podeResponder(q,r)){
@@ -4579,7 +4963,7 @@ function fimTrilha(){
              ? {emo:"👩‍🔬",par:"💡",nome:"B.IA"}
              : {emo:"🤖",par:"⚙️",nome:"BIT"};
     if(cx) cx.innerHTML='<div class="travaj solta"><span class="pcena">'+
-      '<span class="pav sai-cena">'+AJ2.emo+'</span>'+
+      '<span class="pav sai-cena">'+figuraAjudante(AJ2.nome)+'</span>'+
       '<span class="ppar gira2">'+AJ2.par+'</span></span>'+
       '<span class="yfala"><b>'+AJ2.nome+' ·</b> expliquei o que dava. Agora é com você · '+
       'tentativa '+tentAtual+' de '+MAX_TENT+'.</span></div>';
@@ -4595,7 +4979,10 @@ function fimTrilha(){
   const t=document.querySelector(".travaj"); if(t) t.remove();
   const tr=document.getElementById("tr");
   if(tr && !tr.querySelector(".fatia.ok")) tr.insertAdjacentHTML("beforeend",
-    '<div class="fatia ok">✅ Trilha concluída. Ainda falta a leitura que o guardião pediu.</div>');
+    '<div class="fatia ok">✅ Trilha lida. Para responder ainda falta '+
+    (exigenciaAtual(BANCO[roteiro[iTela].qi],roteiro[iTela]).termos.length
+      ? 'ler a palavra que a '+elencoDaTela().guarda.nome+' pediu, logo abaixo das alternativas.'
+      : 'terminar mais uma trilha, porque esta é a tentativa '+tentAtual+' de '+MAX_TENT+'.')+'</div>');
   pintarTrava(q,r); marcarObrigatorias(q,r);
 }
 function destravarAlternativas(){
@@ -4653,7 +5040,11 @@ function abrirG(qi,gi){
   let h='<div class="gcab"><span class="yara">'+G3.emo+'</span>'+
         '<span class="ynome" style="color:'+G3.cor+'">'+G3.nome+'</span>'+
         '<span class="gfala">guarda esta palavra</span></div>'+
-        '<h2>📖 '+g.t+'</h2><div id="gpartes"></div>'+
+        '<h2>📖 '+g.t+'</h2>'+
+        (function(){ const tp=tipoDoTermo(g.t,BANCO[qi]);
+          return '<div class="tipoterm" style="border-color:'+tp.cor+';color:'+tp.cor+'">'+
+                 tp.rot+'</div>' })()+
+        '<div id="gpartes"></div>'+
         '<div class="relg" id="relG"></div>'+
         '<button class="btn'+(jaLeu?' pronto':' escondido')+'" id="fecharG" '+
         (jaLeu?'':'disabled')+' onclick="fecharG()">Fechar ✓</button>';
@@ -4859,6 +5250,9 @@ function painelConferencia(){
   h+='<p style="font-size:16px;color:var(--cinza);margin-top:8px;margin-bottom:0">'+
      'Mostre este código ao professor junto com a sua nota. Ele é calculado a partir das suas '+
      'respostas: se a nota da tela e o código não combinarem, o professor vê na hora.</p>';
+  h+='<p style="font-size:15px;color:var(--cinza);margin-top:10px;margin-bottom:0">'+
+     VERSAO+' · '+NO_PROV+' · <a href="'+LINK_PROV+'" target="_blank" rel="noopener" '+
+     'style="color:var(--azul);font-weight:800">de onde veio este material</a></p>';
   h+='</div>';
   return h;
 }
@@ -4952,7 +5346,31 @@ function telaFinal(){
   '<b style="display:block;color:var(--roxo);margin-bottom:5px">REGISTRO DE FOCO</b>'+
   'Início: <b>'+(horaInicio?horaInicio.toLocaleTimeString("pt-BR").slice(0,5):"—")+'</b> · '+
   'Saídas da tela cheia: <b>'+saidasTC+'</b></div>'+
-  '<table class="tabela"><tr><th>Aula</th><th style="text-align:center">Acertos de 1ª</th>'+
+  (function(){
+      const qd=BANCO.filter(function(x){return x.disc})[0];
+      if(!qd) return "";
+      const degs=degrausDe(qd);
+      let frase="";
+      degs.forEach(function(dg){ const m=MONTAGEM[qd.of+"_"+dg]; if(m) frase+=m.texto+" " });
+      if(!frase.trim()) return "";
+      return '<h3 style="margin-top:16px">✍️ O texto que você montou</h3>'+
+        '<div class="montado"><p>'+frase.trim()+'</p></div>';
+    })()+
+    (function(){
+      const ks=Object.keys(RESULTADO_JOGO||{});
+      if(!ks.length) return "";
+      return '<h3 style="margin-top:16px">🎮 Jogos da pausa · treino, não vale nota</h3>'+
+        '<table class="tabela"><tr><th>Aula</th><th style="text-align:center">Resultado</th></tr>'+
+        ks.map(function(k){ const j=RESULTADO_JOGO[k];
+          return '<tr><td><b>'+nomeAula(k)+'</b></td><td style="text-align:center">'+
+            (j.nota!=null?("nota "+n2(j.nota)):"")+
+            (j.ppm?(" · "+j.ppm+" palavras por minuto"):"")+
+            (j.pontos?(" · "+j.pontos+" pontos"):"")+'</td></tr>' }).join("")+'</table>';
+    })()+
+    '<h3 style="margin-top:16px">📊 Como você foi em cada aula</h3>'+
+    '<p style="font-size:16px">A coluna <b>Acertos de 1ª</b> conta só o que você acertou '+
+    'na primeira tentativa. Acertar depois de usar a ajuda vale para aprender, mas não entra aqui.</p>'+
+    '<table class="tabela"><tr><th>Aula</th><th style="text-align:center">Acertos de 1ª</th>'+
   '<th style="text-align:center">%</th><th style="text-align:center">Nota</th>'+
   '<th style="text-align:center">Refazer</th></tr>'+porAula+'</table>'+
   (piorAula? '<div class="dicaaula">🎯 A aula em que você mais errou foi <b>'+piorAula.nome+
@@ -4968,6 +5386,39 @@ function telaFinal(){
   'Refazer é a última coisa do dia: primeiro responda a avaliação na Alura.</div></div>';
 }
 
+function proximaAulaDepois(idAula){
+  // ao terminar uma aula refeita, ele escolhe: outra aula ou o placar final
+  const feitas={};
+  AULAS.forEach(function(a){
+    const its=roteiro.filter(function(x){return x.t==="perg"&&x.aula===a.id});
+    if(!its.length) return;
+    const ac=its.filter(function(x){return registro[x.n]&&registro[x.n].tent===1}).length;
+    feitas[a.id]={nome:a.nome,ac:ac,tot:its.length,nota:(ac/its.length*10)};
+  });
+  let bt="";
+  Object.keys(feitas).forEach(function(id){
+    const f=feitas[id];
+    if(id===idAula) return;
+    bt+='<button class="btn op2" onclick="refazerAula(\''+id+'\');fecharModal(\'modalRet\')">'+
+        '↻ '+f.nome+' · nota '+n2(f.nota)+'</button>';
+  });
+  const c=document.getElementById("caixaRet");
+  c.innerHTML='<div class="gcab"><span class="yara">🏁</span>'+
+    '<span class="ynome" style="color:#B8860B">FIM DA AULA</span></div>'+
+    '<h2>Você terminou a '+nomeAula(idAula)+'</h2>'+
+    '<p class="ret-p">Rodada <b>'+RODADA+'</b>. Escolha o que fazer agora.</p>'+
+    '<div class="ret-ops">'+
+    '<button class="btn op1" onclick="irAoPlacar();fecharModal(\'modalRet\')">1 · Ver o placar final</button>'+
+    bt+
+    '</div>';
+  document.getElementById("modalRet").classList.add("abre");
+}
+function irAoPlacar(){
+  iTela=roteiro.findIndex(function(x){return x.t==="final"});
+  if(iTela<0) iTela=roteiro.length-1;
+  render();
+}
+let AULA_REFAZENDO=null;
 function refazerAula(idAula){
   const its=roteiro.filter(function(x){return x.t==="perg"&&x.aula===idAula});
   if(!its.length) return;
@@ -4999,8 +5450,9 @@ function refazerTudo(){
 /* ==================== INICIO ==================== */
 montarRoteiro();
 render();
-document.getElementById("rodapever").textContent=
-  VERSAO+" · "+totalPerguntas+" perguntas · 6º ano";
+document.getElementById("rodapever").innerHTML=
+  VERSAO+" · "+totalPerguntas+" perguntas · 6º ano<br>"+
+  "26.08.24=NAV.07-REV_AAIM_6-9ano_002_prov · 02/09/2026";
 setInterval(function(){
   const ag=new Date(), hh=ag.getHours(), mm=ag.getMinutes();
   const eh=document.getElementById("stHora");
@@ -5017,7 +5469,7 @@ setInterval(function(){
 if(MODO_TESTE){ window.__auditoria=function(codigo){ return eval(codigo) } }
 ["pedirTelaCheia","voltarTelaCheia","ignorarTelaCheia","abrirLista","pular","escolherTurma",
  "checarAcordo","painel","abrirG","fecharModal","responder","render","avancar","voltarTela",
- "proxFatia","refazerTudo","refazerAula","retomar","comecarDoZero","voltarOnde","abrirRetomada","reiniciarAula","reiniciarTudo","pintarRodape","trocarAba","fecharG","abrirMetodo","abrirGlosCompleto","pintarTrava","zerarLeituras","abrirTrilha","fimTrilha","voltarParte","nomeDigitado","atualizarChamada","escolherGenero"].forEach(function(n){
+ "proxFatia","refazerTudo","refazerAula","retomar","comecarDoZero","voltarOnde","abrirRetomada","reiniciarAula","reiniciarTudo","proximaAulaDepois","irAoPlacar","escolherAula","irParaAula","pintarRodape","trocarAba","fecharG","abrirMetodo","abrirGlosCompleto","pintarTrava","zerarLeituras","abrirTrilha","fimTrilha","voltarParte","nomeDigitado","atualizarChamada","escolherGenero"].forEach(function(n){
   try{ window[n]=eval(n) }catch(e){}
 });
 })();
